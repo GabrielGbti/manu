@@ -1,0 +1,20 @@
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CONFIGURAÇÃO GLOBAL ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f1e6; /* cor de papel */
+    color: #333;
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    
+}
