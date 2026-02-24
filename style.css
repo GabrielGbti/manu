@@ -1,20 +1,97 @@
-/* ===== RESET BÁSICO ===== */
+/* =========================================
+   1. RESET CSS (Limpando a casa)
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Faz com que as bordas não aumentem o tamanho das divs */
 }
 
-/* ===== CONFIGURAÇÃO GLOBAL ===== */
+/* =========================================
+   2. ESTILOS BASE
+========================================= */
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f1e6; /* cor de papel */
-    color: #333;
-    min-height: 100vh;
+    background-color: #fbf1ee; /* Fundo levemente off-white/rosado */
+    font-family: 'Arial', sans-serif; /* Depois a gente importa a fonte exata do Canva */
+    overflow-x: hidden; /* IMPEDE que o site crie aquela barra de rolar pros lados no celular */
 }
 
-h1{
+
+
+.container {
+    width: 100%;
+    min-height: 100vh; /* Garante que ocupe pelo menos 100% da altura da tela */
+    padding: 20px; /* Margem pro conteúdo não grudar nas bordas do celular */
+    
+    /* Prepara pro conteúdo empilhar (mobile) */
+    display: flex;
+    flex-direction: column;
+    
+    /* Configuração da borda de folhagem no celular */
+    background-image: url('img/folhagem-borda.png'); 
+    background-position: left center; /* Cola ela na esquerda */
+    background-repeat: repeat-y; /* Faz ela repetir de cima a baixo */
+    background-size: 50px auto; /* Controla a largura da folhagem */
+}
+
+/* Área da mensagem e player (fica no topo no celular) */
+.secao-mensagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Dá um respiro entre o título e o player */
+    margin-bottom: 40px; /* Dá um espaço antes de começar as fotos */
     text-align: center;
+}
+
+/* A Mágica do Grid para as fotos */
+.secao-fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas iguaizinhas */
+    gap: 15px; /* Espaço entre as polaroids */
+    width: 100%;
+}
+
+/* Tamanho base das imagens para não vazarem da tela */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Tira o espacinho em branco que sobra embaixo das imagens */
+} 
+
+/* =========================================
+   4. MEDIA QUERIES (Adaptando pro Computador)
+========================================= */
+
+@media (min-width: 900px) {
+    
+    .container {
+        /* No PC a gente muda a direção pra colocar as coisas lado a lado */
+        flex-direction: row; 
+        align-items: center; /* Centraliza verticalmente */
+        
+        /* Aumentamos a margem e limitamos a largura pro PC */
+        padding: 40px; 
+        max-width: 1200px; 
+        margin: 0 auto; /* Centraliza o site na tela */
+        
+        /* Tira aquela borda repetida do mobile */
+        background-image: none; 
+    }
+
+    .secao-mensagem {
+        order: 2; /* Joga a mensagem pra direita */
+        width: 40%; /* Define o espaço dela na tela */
+        margin-bottom: 0;
+    }
+
+    .secao-fotos {
+        order: 1; /* Joga as fotos pra esquerda */
+        width: 55%; /* As fotos ocupam um pouco mais da metade da tela */
+        gap: 25px; /* Aumenta o espaço entre as fotos no PC */
+    }
     
 }
