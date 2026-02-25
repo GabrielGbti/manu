@@ -326,7 +326,7 @@ img {
         align-items: center;
         justify-content: center; 
         gap: 100px;
-        max-width: 1300px; 
+        max-width: 70%; 
         margin: 0 auto; 
         min-height: 100vh;
         padding: 40px;
@@ -356,9 +356,9 @@ img {
     /* MEXENDO NAS IMGs DE DECORAÇÃO*/
 
     .arranjo-curvado1 {
-        width: 400px;
-        right: -60px;
-        top: -40px;
+        width: 700px;
+        right: -40px;
+        top: -100px;
     }
 
     .arranjo-curvado2 {
@@ -366,15 +366,62 @@ img {
         top: auto; 
         left: auto; /* Só por garantia, se você tiver usado left lá */
         /* 2. Agora sim ele vai obedecer as suas regras novas! */
-        right: -70px; /* -700px me pareceu muito, ele vai sumir da tela! Reduzi pra testar */
-        bottom: 70px;
+        left: -370px; /* -700px me pareceu muito, ele vai sumir da tela! Reduzi pra testar */
+        bottom: -250px;
+        transform: rotate(35deg);
+        width: 600px;
+    }
+
+    .arranjo-reto2 {
+        top: auto;
+        left: auto;
+        right: 20%;
+        bottom: 0;
+        width: 800px;
+        transform: rotate(0deg);
+    }
+
+    .arranjo-reto1 {
+        top: -10px;
+        left: auto;
+        right: 50%;
+        bottom: auto;
+        transform: rotate(180deg);
+        width: 800px;
+    }
+
+    .folhas1 {
+        top: auto;
+        left: auto;
+        bottom: -30px;
+        width: 250px;
+   
     }
 
 
+    .folhas2 {
+        width: 200px;
+        top: auto;
+        left: auto;
+    }
+    
+    
+    .folhas3 {
+        top: -40px;
+        left: auto;
+        right: 38%;
+        bottom: auto;
+        width: 230px;
+        transform: rotate(180deg);
 
+    }
 
+    
+    .Girassol2 {
+        width: 300px;
+        top: 380px;
 
-
+    }
 
 
 
