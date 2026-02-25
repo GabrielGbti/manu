@@ -59,6 +59,16 @@ body {
     text-align: center;
 }
 
+.player {
+    cursor: pointer; /* Faz o mouse virar mãozinha */
+    transition: transform 0.2s ease; /* Dá um efeitinho suave */
+}
+
+/* Efeito bônus: o botão dá uma leve afundada quando clica */
+.player:active {
+    transform: scale(0.95);
+}
+
 .texto-principal {
     margin-bottom: 30px; 
     z-index: 2;

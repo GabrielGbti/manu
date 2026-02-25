@@ -28,9 +28,12 @@
             
             <section class="secao-mensagem">
                 <img src="img/FelizAn.png" alt="Feliz Aniversário Meu Amor" class="texto-principal">
-                <img src="img/play.png" alt="Player de Música" class="player">
-                <p class="texto-play">clique no play, sorriso!</p> 
-            </section>    
+                    
+                <img src="img/play.png" alt="Player de Música" class="player" id="btn-play">
+                <p class="texto-play">clique no play, sorriso!</p>
+
+                <audio id="musica" src="img/jem.mp3"></audio>
+            </section>   
 
             <section class="secao-fotos">
                 <div class="polaroid"><img src="img-casal/polaroids/1.png" alt="Foto 1"></div>
@@ -59,7 +62,37 @@
 
 
 
-    
+
+
+
+
+
+
+
+    <script>
+        // Pega o áudio e o botão pelo ID
+        var musica = document.getElementById("musica");
+        var btnPlay = document.getElementById("btn-play");
+
+        // Quando clicar no botão, faz o seguinte:
+        btnPlay.onclick = function() {
+            if (musica.paused) {
+                // Se estiver pausado: Toca a música e troca a foto pro Pause
+                musica.play();
+                btnPlay.src = "img/play-go.png"; 
+            } else {
+                // Se estiver tocando: Pausa a música e volta a foto pro Play
+                musica.pause();
+                btnPlay.src = "img/play.png";
+            }
+        }
+    </script>
+
+
+
+
+
+
 
     <script>
         const girassol = document.querySelector('.Girassol1');
