@@ -266,7 +266,7 @@ img {
 
 
 /* --- ESPAÇO RESERVADO PARA SEUS NOVOS ENFEITES ---
-   Pode começar a colar as novas classes aqui embaixo!
+Pode começar a colar as novas classes aqui embaixo!
 */
 
 
@@ -290,61 +290,149 @@ img {
 
 
 
-    .Girassol1 {
-        pointer-events: auto;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
+.Girassol1 {
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.Girassol1:active {
+    transform: rotate(-22deg);
+}
+
+
+
+.Girassol2 {
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+
+.Girassol2:active {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes tremer {
+    0%   { transform: rotate(180deg) translateX(0); }
+    25%  { transform: rotate(180deg) translateX(-5px); }
+    50%  { transform: rotate(180deg) translateX(5px); }
+    75%  { transform: rotate(180deg) translateX(-5px); }
+    100% { transform: rotate(180deg) translateX(0); }
+}
+
+.tremendo {
+    animation: tremer 0.4s ease;
+}
+
     
-    .Girassol1:active {
-        transform: rotate(-22deg);
-    }
-
-
-
-    .Girassol2 {
-        pointer-events: auto;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-
-    }
-
-    .Girassol2:active {
-        transform: scale(0.9);
-    }
 
 
 
 
 
 
+/* =========================================
+CONTAINER DOIS - MÁQUINA DE ESCREVER
+========================================= */
 
 
 
+/* ================= ESTILO DO SEGUNDO CONTAINER ================= */
+.secao-maquina {
+    min-height: 100vh; /* Ocupa a altura inteira de uma tela (força o scroll) */
+    display: flex;
+    align-items: center; /* Centraliza no meio da tela */
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-    @keyframes tremer {
-        0%   { transform: rotate(180deg) translateX(0); }
-        25%  { transform: rotate(180deg) translateX(-5px); }
-        50%  { transform: rotate(180deg) translateX(5px); }
-        75%  { transform: rotate(180deg) translateX(-5px); }
-        100% { transform: rotate(180deg) translateX(0); }
-    }
-
-    .tremendo {
-        animation: tremer 0.4s ease;
-    }
-
+.caixa-texto h2 {
+    font-family: 'SuaFonteAqui', serif; /* Coloque o nome da fonte bonita que você tá usando */
+    font-size: clamp(24px, 4vw, 40px); /* Responsivo igual você já sabe fazer! */
+    color: #333; /* Cor do texto (um cinza bem escuro) */
+    text-align: center;
+    font-weight: normal;
+    max-width: 800px;
     
+    /* Trava a altura pra página não ficar pulando enquanto o texto "nasce" */
+    min-height: 150px; 
+}
+
+/* O efeitinho da barrinha de texto piscando */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: #333;
+    animation: piscar 0.8s infinite;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
