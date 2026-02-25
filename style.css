@@ -61,12 +61,12 @@ body {
 
 .texto-principal {
     margin-bottom: 30px; 
-    position: relative;
     z-index: 2;
+    width: 90%;
 }
 
 .player {
-    width: 60%;
+    width: 50%;
 }
 
 .texto-play {
@@ -121,6 +121,10 @@ img {
 
 
 
+
+
+
+
 /* =========================================
    BASE DOS ENFEITES (Geral)
 ========================================= */
@@ -151,7 +155,6 @@ img {
 
 
 
-
 /* GIRASSÓIS */
 .Girassol1 { 
     left: 70px; 
@@ -160,9 +163,11 @@ img {
     z-index: -1; 
 }
 .Girassol2 { 
-    top: 12%; 
+    top: 9%; 
     left: -40px; 
-    width: 215px; 
+    width: 180px; 
+    z-index: 1; 
+
 
 }
 
@@ -170,13 +175,40 @@ img {
 
 
 /* TEMÁTICOS (Psico e Livros) */
-.psicologia { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; z-index: 2; }
+.psicologia { 
+    top: 69%; 
+    left: 45%; 
+    transform: translate(-50%, -50%); 
+    width: 50px; 
+    z-index: 2; 
+
+}
 .Livros { top: 55%; right: 10px; width: 60px; z-index: 2; }
 
+
+
+
+
 /* FOLHAS */
-.folhas1 { top: 51%; right: 10px; width: 70px; }
-.folhas2 { top: 45%; left: 10px; width: 70px; }
-.folhas3 { bottom: 5%; left: 50%; width: 80px; }
+.folhas1 { 
+    top: 10%; 
+    right: 10px; 
+    width: 110px; 
+    transform: rotate(-38deg) scaleX(-1);
+}
+
+.folhas2 { 
+    top: 0%; 
+    width: 100px;
+    left: 10px; 
+    transform: rotate(180deg);
+}
+.folhas3 { 
+    top: 25%; 
+    right: -7%; 
+    width: 100px; 
+    transform: rotate(-15deg);
+}
 
 
 
