@@ -165,7 +165,7 @@ img {
 .Girassol1 { 
     bottom: -40px; /* Desce um pouquinho da borda de baixo da foto */
     right: 40px;  /* Vai um pouquinho pra direita da foto */
-    width: 115px !important;
+    width: 105px !important;
     z-index: 5; /* Joga ele por cima da foto */
 }
 
@@ -189,7 +189,7 @@ img {
     z-index: 2; 
 
 }
-.Livros { top: 55%; right: 10px; width: 60px; z-index: 2; }
+.Livros { top: 65%; right: 10px; width: 60px; z-index: 2; }
 
 
 
@@ -222,14 +222,14 @@ img {
 
 /* ARRANJOS RETOS */
 .arranjo-reto1 { 
-    bottom: 550px;
-    right: -90px; 
-    width: 250px; 
+    bottom: 47%;
+    right: -155px; 
+    width: 450px; 
     transform: rotate(-90deg);
 
 }
 .arranjo-reto2 { 
-    bottom: 310px; 
+    bottom: 18%; 
     left: -120px; 
     width: 310px; 
     transform: rotate(90deg);
