@@ -280,6 +280,28 @@ img {
 
 
 
+    .Girassol1 {
+        pointer-events: auto;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .Girassol1:active {
+        transform: rotate(-22deg);
+    }
+
+
+
+    .Girassol2 {
+        pointer-events: auto;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+
+    }
+
+    .Girassol2:active {
+        transform: scale(0.9);
+    }
 
 
 
@@ -300,6 +322,17 @@ img {
 
 
 
+    @keyframes tremer {
+        0%   { transform: rotate(180deg) translateX(0); }
+        25%  { transform: rotate(180deg) translateX(-5px); }
+        50%  { transform: rotate(180deg) translateX(5px); }
+        75%  { transform: rotate(180deg) translateX(-5px); }
+        100% { transform: rotate(180deg) translateX(0); }
+    }
+
+    .tremendo {
+        animation: tremer 0.4s ease;
+    }
 
     
 
@@ -363,6 +396,17 @@ img {
 
 
     /* MEXENDO NAS IMGs DE DECORAÇÃO*/
+
+    .Livros {
+        top: 50%;
+        left: 15%;
+    }
+
+    .psicologia {
+        bottom: auto;
+        left: 18%;
+        top: 20%;
+    }
 
     .arranjo-curvado1 {
         width: 700px;
@@ -430,24 +474,13 @@ img {
 
     /* ANIMAÇÕES */
 
-    @keyframes tremer {
-        0%   { transform: rotate(180deg) translateX(0); }
-        25%  { transform: rotate(180deg) translateX(-5px); }
-        50%  { transform: rotate(180deg) translateX(5px); }
-        75%  { transform: rotate(180deg) translateX(-5px); }
-        100% { transform: rotate(180deg) translateX(0); }
-    }
-
-    .tremendo {
-        animation: tremer 0.4s ease;
-    }
 
     
     .Girassol1 {
         pointer-events: auto;
         width: 140px !important ;
         bottom: -70px;
-        transition: transform 0.3s ease !important;
+        transition: transform 0.3s ease;
         cursor: pointer;
     }
     
@@ -461,7 +494,7 @@ img {
         pointer-events: auto;
         width: 300px;
         top: 380px;
-        transition: transform 0.3s ease !important;
+        transition: transform 0.3s ease;
         cursor: pointer;
 
     }
