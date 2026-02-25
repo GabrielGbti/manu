@@ -48,6 +48,36 @@
     
     </main>
     
+
+
+
+
+    <script>
+        const girassol = document.querySelector('.Girassol1');
+        const folhas = document.querySelector('.folhas3');
+
+        girassol.addEventListener('click', () => {
+            folhas.classList.add('tremendo');
+
+            setTimeout(() => {
+                folhas.classList.remove('tremendo');
+            }, 400);
+        });
+    </script>
+
+    <script>
+        const girassol2 = document.querySelector('.Girassol2');
+        const folhas2 = document.querySelector('.folhas2');
+
+        girassol2.addEventListener('click', () => {
+            folhas2.classList.add('tremendo');
+
+            setTimeout(() => {
+                folhas2.classList.remove('tremendo');
+            }, 400);
+        });
+    </script>
+
 </body>
 
 </html>

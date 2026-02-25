@@ -301,6 +301,9 @@ img {
 
 
 
+    
+
+
 
 
 
@@ -339,6 +342,13 @@ img {
         min-height: auto; 
     }
 
+
+
+
+
+
+
+    
     .secao-fotos {
         order: 1; 
         width: 55%; 
@@ -346,7 +356,6 @@ img {
         grid-template-columns: repeat(3, 1fr); 
         min-height: auto; 
     }
-
 
 
 
@@ -407,20 +416,58 @@ img {
     
     
     .folhas3 {
+        pointer-events: auto;
         top: -40px;
         left: auto;
         right: 38%;
         bottom: auto;
         width: 230px;
         transform: rotate(180deg);
+    }
 
+
+
+
+    /* ANIMAÇÕES */
+
+    @keyframes tremer {
+        0%   { transform: rotate(180deg) translateX(0); }
+        25%  { transform: rotate(180deg) translateX(-5px); }
+        50%  { transform: rotate(180deg) translateX(5px); }
+        75%  { transform: rotate(180deg) translateX(-5px); }
+        100% { transform: rotate(180deg) translateX(0); }
+    }
+
+    .tremendo {
+        animation: tremer 0.4s ease;
     }
 
     
+    .Girassol1 {
+        pointer-events: auto;
+        width: 140px !important ;
+        bottom: -70px;
+        transition: transform 0.3s ease !important;
+        cursor: pointer;
+    }
+    
+    .Girassol1:active {
+        transform: rotate(-22deg);
+    }
+
+
+
     .Girassol2 {
+        pointer-events: auto;
         width: 300px;
         top: 380px;
+        transition: transform 0.3s ease !important;
+        cursor: pointer;
 
+    }
+
+    .Girassol2:active {
+        transform: scale(0.9);
     }
 
 
