@@ -13,8 +13,6 @@ html, body {
     position: relative;
 }
 
-
-
 /* =========================================
    2. ESTILOS BASE
 ========================================= */
@@ -28,7 +26,7 @@ body {
     overflow-x: hidden; /* Reforço: o que sair do container, o container esconde */
     position: relative; /* ÂNCORA OFICIAL */
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
