@@ -326,7 +326,7 @@ img {
         align-items: center;
         justify-content: center; 
         gap: 100px;
-        max-width: 1200px; 
+        max-width: 1300px; 
         margin: 0 auto; 
         min-height: 100vh;
         padding: 40px;
@@ -346,4 +346,64 @@ img {
         grid-template-columns: repeat(3, 1fr); 
         min-height: auto; 
     }
+
+
+
+
+
+
+
+    /* MEXENDO NAS IMGs DE DECORAÇÃO*/
+
+    .arranjo-curvado1 {
+        width: 400px;
+        right: -60px;
+        top: -40px;
+    }
+
+    .arranjo-curvado2 {
+        /* 1. Desliga as regras que vieram do celular */
+        top: auto; 
+        left: auto; /* Só por garantia, se você tiver usado left lá */
+        /* 2. Agora sim ele vai obedecer as suas regras novas! */
+        right: -70px; /* -700px me pareceu muito, ele vai sumir da tela! Reduzi pra testar */
+        bottom: 70px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
