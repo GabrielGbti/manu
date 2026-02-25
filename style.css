@@ -94,7 +94,13 @@ img {
 } 
 
 /* ESTILO DAS POLAROIDS */
-.polaroid img {
+
+.polaroid {
+    position: relative; /* Transforma cada foto numa âncora particular */
+}
+
+/* Aplica o estilo apenas nas fotos, ignorando os enfeites */
+.polaroid img:not(.enfeite) {
     width: 100%; 
     height: auto;
     box-shadow: 3px 8px 15px rgba(0, 0, 0, 0.2); 
@@ -102,18 +108,20 @@ img {
     transition: all 0.6s ease; 
 }
 
-.polaroid:nth-child(odd) img { transform: rotate(-0.1deg); }
-.polaroid:nth-child(even) img { transform: rotate(0.1deg); }
+.polaroid:nth-child(odd) img:not(.enfeite) { 
+    transform: rotate(-0.1deg); 
+}
 
-.polaroid img:hover {
+.polaroid:nth-child(even) img:not(.enfeite) { 
+    transform: rotate(0.1deg); 
+}
+
+.polaroid img:not(.enfeite):hover {
     transform: rotate(0deg) scale(1.05) translateY(-5px); 
     z-index: 10; 
     box-shadow: 8px 15px 30px rgba(0, 0, 0, 0.3); 
     cursor: pointer; 
 }
-
-
-
 
 
 
@@ -153,21 +161,19 @@ img {
 
 
 
-
-
 /* GIRASSÓIS */
 .Girassol1 { 
-    left: 70px; 
-    width: 130px; 
-    bottom: 310px;
-    z-index: 1; 
+    bottom: -40px; /* Desce um pouquinho da borda de baixo da foto */
+    right: 40px;  /* Vai um pouquinho pra direita da foto */
+    width: 115px !important;
+    z-index: 5; /* Joga ele por cima da foto */
 }
+
 .Girassol2 { 
     top: 9%; 
     left: -40px; 
-    width: 180px; 
+    width: 210px; 
     z-index: 1; 
-
 
 }
 
