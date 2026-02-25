@@ -160,7 +160,7 @@ img {
     left: 70px; 
     width: 130px; 
     bottom: 310px;
-    z-index: -1; 
+    z-index: 1; 
 }
 .Girassol2 { 
     top: 9%; 
@@ -176,8 +176,8 @@ img {
 
 /* TEMÁTICOS (Psico e Livros) */
 .psicologia { 
-    top: 69%; 
-    left: 45%; 
+    top: 83%; 
+    right: -16px; 
     transform: translate(-50%, -50%); 
     width: 50px; 
     z-index: 2; 
@@ -216,7 +216,7 @@ img {
 
 /* ARRANJOS RETOS */
 .arranjo-reto1 { 
-    bottom: 450px;
+    bottom: 550px;
     right: -90px; 
     width: 250px; 
     transform: rotate(-90deg);
