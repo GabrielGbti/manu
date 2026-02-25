@@ -1,97 +1,311 @@
 /* =========================================
    1. RESET CSS (Limpando a casa)
 ========================================= */
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Faz com que as bordas não aumentem o tamanho das divs */
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Corta qualquer coisa que tente sair pelos lados */
+    max-width: 100%;
+    position: relative;
 }
 
 /* =========================================
    2. ESTILOS BASE
 ========================================= */
-
-
 body {
-    background-color: #fbf1ee; /* Fundo levemente off-white/rosado */
-    font-family: 'Arial', sans-serif; /* Depois a gente importa a fonte exata do Canva */
-    overflow-x: hidden; /* IMPEDE que o site crie aquela barra de rolar pros lados no celular */
+    background-color: #fbf1ee;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
 }
-
-
 
 .container {
+    overflow-x: hidden; /* Reforço: o que sair do container, o container esconde */
+    position: relative; /* ÂNCORA OFICIAL */
     width: 100%;
-    min-height: 100vh; /* Garante que ocupe pelo menos 100% da altura da tela */
-    padding: 20px; /* Margem pro conteúdo não grudar nas bordas do celular */
-    
-    /* Prepara pro conteúdo empilhar (mobile) */
+    min-height: 100vh;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    
-    /* Configuração da borda de folhagem no celular */
-    background-image: url('img/folhagem-borda.png'); 
-    background-position: left center; /* Cola ela na esquerda */
-    background-repeat: repeat-y; /* Faz ela repetir de cima a baixo */
-    background-size: 50px auto; /* Controla a largura da folhagem */
 }
 
-/* Área da mensagem e player (fica no topo no celular) */
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   3. ESTRUTURA DAS SEÇÕES (Mobile First)
+========================================= */
+
+/* TELA 1: MENSAGEM */
 .secao-mensagem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* Dá um respiro entre o título e o player */
-    margin-bottom: 40px; /* Dá um espaço antes de começar as fotos */
+    gap: 30px; 
+    min-height: 100vh; 
+    justify-content: center; 
     text-align: center;
 }
 
-/* A Mágica do Grid para as fotos */
-.secao-fotos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas iguaizinhas */
-    gap: 15px; /* Espaço entre as polaroids */
-    width: 100%;
+.texto-principal {
+    margin-bottom: 30px; 
+    position: relative;
+    z-index: 2;
 }
 
-/* Tamanho base das imagens para não vazarem da tela */
+.player {
+    width: 60%;
+}
+
+.texto-play {
+    font-size: 12px; 
+    color: #555; 
+    margin-top: -20px; 
+    font-style: initial; 
+}
+
+/* TELA 2: FOTOS */
+.secao-fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    width: 100%;
+    min-height: 100vh;
+    align-content: center; 
+    position: relative; /* Âncora para ícones internos */
+}
+
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Tira o espacinho em branco que sobra embaixo das imagens */
+    display: block; 
 } 
+
+/* ESTILO DAS POLAROIDS */
+.polaroid img {
+    width: 100%; 
+    height: auto;
+    box-shadow: 3px 8px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 2px; 
+    transition: all 0.6s ease; 
+}
+
+.polaroid:nth-child(odd) img { transform: rotate(-0.1deg); }
+.polaroid:nth-child(even) img { transform: rotate(0.1deg); }
+
+.polaroid img:hover {
+    transform: rotate(0deg) scale(1.05) translateY(-5px); 
+    z-index: 10; 
+    box-shadow: 8px 15px 30px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+}
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   BASE DOS ENFEITES (Geral)
+========================================= */
+.enfeite {
+    position: absolute;
+    z-index: -1; 
+    pointer-events: none;
+}
+
+
+/* ARRANJOS CURVADOS */
+.arranjo-curvado1 { 
+    top: -27px;
+    right: -25px; 
+    width: 240px;
+    transform: rotate(1deg);
+}
+.arranjo-curvado2 { 
+    top: 25%; 
+    left: -200px; 
+    width: 350px; 
+    transform: rotate(50deg);
+
+}
+
+
+
+
+
+
+
+/* GIRASSÓIS */
+.Girassol1 { 
+    left: 70px; 
+    width: 130px; 
+    bottom: 310px;
+    z-index: -1; 
+}
+.Girassol2 { 
+    top: 12%; 
+    left: -40px; 
+    width: 215px; 
+
+}
+
+
+
+
+/* TEMÁTICOS (Psico e Livros) */
+.psicologia { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; z-index: 2; }
+.Livros { top: 55%; right: 10px; width: 60px; z-index: 2; }
+
+/* FOLHAS */
+.folhas1 { top: 51%; right: 10px; width: 70px; }
+.folhas2 { top: 45%; left: 10px; width: 70px; }
+.folhas3 { bottom: 5%; left: 50%; width: 80px; }
+
+
+
+
+
+/* ARRANJOS RETOS */
+.arranjo-reto1 { 
+    bottom: 450px;
+    right: -90px; 
+    width: 250px; 
+    transform: rotate(-90deg);
+
+}
+.arranjo-reto2 { 
+    bottom: 310px; 
+    left: -120px; 
+    width: 310px; 
+    transform: rotate(90deg);
+    z-index: -2; 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ESPAÇO RESERVADO PARA SEUS NOVOS ENFEITES ---
+   Pode começar a colar as novas classes aqui embaixo!
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================
    4. MEDIA QUERIES (Adaptando pro Computador)
 ========================================= */
-
 @media (min-width: 900px) {
     
     .container {
-        /* No PC a gente muda a direção pra colocar as coisas lado a lado */
-        flex-direction: row; 
-        align-items: center; /* Centraliza verticalmente */
-        
-        /* Aumentamos a margem e limitamos a largura pro PC */
-        padding: 40px; 
+        width: 100%;
+        max-width: none; 
+        margin: 0;
+        padding: 0;
+        display: block; 
+        position: relative; 
+    }
+
+    .conteudo-central {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; 
+        gap: 100px;
         max-width: 1200px; 
-        margin: 0 auto; /* Centraliza o site na tela */
-        
-        /* Tira aquela borda repetida do mobile */
-        background-image: none; 
+        margin: 0 auto; 
+        min-height: 100vh;
+        padding: 40px;
     }
 
     .secao-mensagem {
-        order: 2; /* Joga a mensagem pra direita */
-        width: 40%; /* Define o espaço dela na tela */
+        order: 2; 
+        width: 35%; 
         margin-bottom: 0;
+        min-height: auto; 
     }
 
     .secao-fotos {
-        order: 1; /* Joga as fotos pra esquerda */
-        width: 55%; /* As fotos ocupam um pouco mais da metade da tela */
-        gap: 25px; /* Aumenta o espaço entre as fotos no PC */
+        order: 1; 
+        width: 55%; 
+        gap: 25px; 
+        grid-template-columns: repeat(3, 1fr); 
+        min-height: auto; 
     }
-    
 }
