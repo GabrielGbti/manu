@@ -52,9 +52,26 @@
     </main>
     
     <section class="secao-maquina" id="secao-2">
+
+
         <div class="caixa-texto">
             <h2 id="texto-digitado"><span class="cursor"></span></h2>
         </div>
+
+        <img src="img/gifmanu1.gif" class="gif" alt="gif manu">
+
+        <img src="img/Girassol.png" class="girassol-container2" alt="Girassol">
+
+        <img src="img/folhas.png" class="folhas1-container2" alt="folhas">
+        <img src="img/folhas.png" class="folhas2-container2" alt="folhas">
+        <img src="img/folhas.png" class="folhas3-container2" alt="folhas">
+
+
+
+
+
+
+
     </section>
 
 
@@ -134,49 +151,36 @@
 
 
     <script>
-        const frase = "Você é muito amável, Manuela, encanta todos que te conhecem:";
-
+        const frase = "Seu astral ilumina todos como o sol, Manuela. Por isso te amar é tão fácil. Quer uma prova?";
         const elementoTexto = document.getElementById("texto-digitado");
         let jaDigitou = false;
 
         function efeitoMaquina(texto, elemento, velocidade) {
             let i = 0;
-            elemento.innerHTML = '<span class="cursor"></span>'; // Limpa e põe o cursor
-            
+            elemento.textContent = "";
+
             function digitar() {
                 if (i < texto.length) {
-                    // Insere a letra atual antes do cursor
-                    elemento.innerHTML = elemento.innerHTML.replace('<span class="cursor"></span>', texto.charAt(i) + '<span class="cursor"></span>');
+                    elemento.textContent += texto.charAt(i);
                     i++;
-                    setTimeout(digitar, velocidade); // Chama a próxima letra
-                } else {
-                    // Quando terminar de digitar tudo, faz o cursor sumir depois de 2 segundos
-                    setTimeout(() => {
-                        const cursor = elemento.querySelector('.cursor');
-                        if(cursor) cursor.style.display = 'none';
-                    }, 2000);
+                    setTimeout(digitar, velocidade);
                 }
             }
             digitar();
         }
 
-        // O "Olheiro" do Scroll
         const observador = new IntersectionObserver((entradas) => {
             entradas.forEach(entrada => {
-                // Se a seção apareceu na tela (isIntersecting) e ainda não foi digitada:
                 if (entrada.isIntersecting && !jaDigitou) {
-                    jaDigitou = true; // Marca como concluído para não repetir
-                    // 80 é a velocidade. Quanto menor o número, mais rápido digita!
-                    efeitoMaquina(frase, elementoTexto, 80); 
+                    jaDigitou = true;
+                    efeitoMaquina(frase, elementoTexto, 80);
                 }
             });
-        }, { threshold: 0.5 }); // threshold 0.5 significa: comece quando metade da seção estiver visível
+        }, { threshold: 0.5 });
 
-        // Manda o olheiro ficar vigiando a seção 2
-        observador.observe(document.getElementById("secao-2"));
+        const secao = document.getElementById("secao-2");
+        if (secao) observador.observe(secao);
     </script>
-
-
 
 
 

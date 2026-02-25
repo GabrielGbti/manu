@@ -13,6 +13,8 @@ html, body {
     position: relative;
 }
 
+
+
 /* =========================================
    2. ESTILOS BASE
 ========================================= */
@@ -26,12 +28,11 @@ body {
     overflow-x: hidden; /* Reforço: o que sair do container, o container esconde */
     position: relative; /* ÂNCORA OFICIAL */
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
-
 
 
 
@@ -58,6 +59,16 @@ body {
     justify-content: center; 
     text-align: center;
 }
+
+.mulher{
+    position: absolute;
+    width: 300px;
+    align-items: center;
+
+
+}
+
+
 
 .player {
     cursor: pointer; /* Faz o mouse virar mãozinha */
@@ -359,13 +370,61 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 /* ================= ESTILO DO SEGUNDO CONTAINER ================= */
 .secao-maquina {
-    min-height: 100vh; /* Ocupa a altura inteira de uma tela (força o scroll) */
+    min-height: 85vh; /* Ocupa a altura inteira de uma tela (força o scroll) */
     display: flex;
     align-items: center; /* Centraliza no meio da tela */
     justify-content: center;
     position: relative;
     padding: 20px;
 }
+
+
+
+.gif{
+    position: absolute;
+    bottom: 250px;
+    left: 30%;
+    width: 180px;
+}
+
+.girassol-container2{
+    position: absolute;
+    right: 0;
+    bottom: 320px;
+    width: 75px;
+    z-index: 1;
+}
+
+.folhas1-container2{
+    position: absolute;
+    width: 70px;
+    right: -12px;
+    top: 20%;
+    transform: rotate(-18deg);
+    z-index: -1;
+
+}
+
+.folhas2-container2{
+    position: absolute;
+    width: 70px;
+    right: -12px;
+    top: 50%;
+    transform: scaleX(-1);
+    transform: rotate(-18deg);
+
+
+}
+
+.folhas3-container2{
+    position: absolute;
+    width: 70px;
+    right: -12px;
+    top: 35%;
+    transform: rotate(-18deg);
+}
+
+
 
 .caixa-texto h2 {
     font-family: 'SuaFonteAqui', serif; /* Coloque o nome da fonte bonita que você tá usando */
@@ -376,7 +435,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     max-width: 800px;
     
     /* Trava a altura pra página não ficar pulando enquanto o texto "nasce" */
-    min-height: 150px; 
+    height: 50vh; 
 }
 
 /* O efeitinho da barrinha de texto piscando */
@@ -619,6 +678,50 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
+/* ================= ESTILO DO SEGUNDO CONTAINER ================= */
+
+
+
+    .gif{
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        width: 280px;
+    }
+
+    .girassol-container2{
+        right: 90px;
+        bottom: 260px;
+        width: 155px;
+        z-index: 1;
+    }
+
+    .folhas1-container2{
+        width: 150px;
+        right: -12px;
+        top: 8%;
+        transform: rotate(-28deg);
+        z-index: -1;
+
+    }
+
+    .folhas2-container2{
+        position: absolute;
+        width: 150px;
+        right: -12px;
+        top: 40%;
+        transform: rotate(-35deg);
+
+
+    }
+
+    .folhas3-container2{
+        position: absolute;
+        width: 150px;
+        right: -12px;
+        top: 80%;
+        transform: rotate(-28deg);
+    }
 
 
 
