@@ -8,8 +8,8 @@
 }
 
 html, body {
-    overflow-x: hidden ; /* Corta qualquer coisa que tente sair pelos lados */
-    max-width: 100%;
+    overflow-x: hidden !important; /* Corta qualquer coisa que tente sair pelos lados */
+    width: 100%;
     position: relative;
 }
 
@@ -367,9 +367,11 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 /* ================= ESTILO DO SEGUNDO CONTAINER ================= */
 .secao-maquina {
-    min-height: 85vh; /* Ocupa a altura inteira de uma tela (força o scroll) */
+    min-height: 100vh;
+    width: 100%; /* Garante que não vai passar da largura da tela */
+    overflow: hidden; /* A JAULA: Corta qualquer flor ou imagem que tentar vazar pros lados! */
     display: flex;
-    align-items: center; /* Centraliza no meio da tela */
+    align-items: center;
     justify-content: center;
     position: relative;
     padding: 20px;
