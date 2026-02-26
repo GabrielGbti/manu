@@ -1,20 +1,6 @@
 
 
 /* ================= TELA DE CARREGAMENTO ================= */
-#tela-carregamento {
-    position: fixed; /* Fica travada na tela */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/papel.png);
-    z-index: 9999; /* Um número gigante para garantir que cubra ABSOLUTAMENTE TUDO */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.8s ease; /* Efeito de sumir suavemente */
-}
 
 .conteudo-carregamento {
     text-align: center;
