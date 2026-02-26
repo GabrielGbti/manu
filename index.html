@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Aniversário, Meu amor!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carregamento.css">
 </head>
 <body>
+
+    <div id="tela-carregamento">
+        <div class="conteudo-carregamento">
+            <p>Este site foi feito por Gabriel - ig @gbielbernardo - <br>para a sua amada, com muito carinho, <br>então aproveite com atenção ❤️</p>
+            <button id="btn-entrar" disabled>Continuar (em 5...)</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <main class="container">
 
         <img src="img/arranjo-curvado.png" class="enfeite arranjo-curvado1" alt="Arranjo Curvado">
@@ -30,7 +45,7 @@
                 <img src="img/FelizAn.png" alt="Feliz Aniversário Meu Amor" class="texto-principal">
                     
                 <img src="img/play.png" alt="Player de Música" class="player" id="btn-play">
-                <p class="texto-play">clique no play, sorriso!</p>
+                <p class="texto-play" id="texto-dica">clique no play, sorriso!</p>
 
                 <audio id="musica" src="img/jem.mp3"></audio>
             </section>   
@@ -89,101 +104,7 @@
 
 
 
-
-    <script>
-        // Pega o áudio e o botão pelo ID
-        var musica = document.getElementById("musica");
-        var btnPlay = document.getElementById("btn-play");
-
-        // Quando clicar no botão, faz o seguinte:
-        btnPlay.onclick = function() {
-            if (musica.paused) {
-                // Se estiver pausado: Toca a música e troca a foto pro Pause
-                musica.play();
-                btnPlay.src = "img/play-go.png"; 
-            } else {
-                // Se estiver tocando: Pausa a música e volta a foto pro Play
-                musica.pause();
-                btnPlay.src = "img/play.png";
-            }
-        }
-    </script>
-
-
-
-
-
-
-
-    <script>
-        const girassol = document.querySelector('.Girassol1');
-        const folhas = document.querySelector('.folhas3');
-
-        girassol.addEventListener('click', () => {
-            folhas.classList.add('tremendo');
-
-            setTimeout(() => {
-                folhas.classList.remove('tremendo');
-            }, 400);
-        });
-    </script>
-
-    <script>
-        const girassol2 = document.querySelector('.Girassol2');
-        const folhas2 = document.querySelector('.folhas2');
-
-        girassol2.addEventListener('click', () => {
-            folhas2.classList.add('tremendo');
-
-            setTimeout(() => {
-                folhas2.classList.remove('tremendo');
-            }, 400);
-        });
-    </script>
-
-
-
-
-
-
-
-
-
-
-    <script>
-        const frase = "Seu astral ilumina todos como o sol, Manuela. Por isso te amar é tão fácil. Quer uma prova?";
-        const elementoTexto = document.getElementById("texto-digitado");
-        let jaDigitou = false;
-
-        function efeitoMaquina(texto, elemento, velocidade) {
-            let i = 0;
-            elemento.textContent = "";
-
-            function digitar() {
-                if (i < texto.length) {
-                    elemento.textContent += texto.charAt(i);
-                    i++;
-                    setTimeout(digitar, velocidade);
-                }
-            }
-            digitar();
-        }
-
-        const observador = new IntersectionObserver((entradas) => {
-            entradas.forEach(entrada => {
-                if (entrada.isIntersecting && !jaDigitou) {
-                    jaDigitou = true;
-                    efeitoMaquina(frase, elementoTexto, 80);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const secao = document.getElementById("secao-2");
-        if (secao) observador.observe(secao);
-    </script>
-
-
-
+    <script src="script.js" ></script>
 
 </body>
 </html>

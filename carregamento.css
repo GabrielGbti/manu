@@ -1,0 +1,52 @@
+
+
+/* ================= TELA DE CARREGAMENTO ================= */
+#tela-carregamento {
+    position: fixed; /* Fica travada na tela */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/papel.png);
+    z-index: 9999; /* Um número gigante para garantir que cubra ABSOLUTAMENTE TUDO */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease; /* Efeito de sumir suavemente */
+}
+
+.conteudo-carregamento {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+
+.conteudo-carregamento p {
+    font-size: clamp(18px, 4vw, 24px); /* Fica bom no PC e no Celular */
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+#btn-entrar {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #cdcfbb; /* Começa cinza (bloqueado) */
+    color: #666;
+    border: none;
+    border-radius: 25px;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+/* Classe que o JS vai adicionar quando der os 5 segundos */
+#btn-entrar.liberado {
+    background-color: #4e834e; /* Pode mudar pra cor que combinar mais (um laranja, verde ou rosa) */
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#btn-entrar.liberado:hover {
+    transform: scale(1.05); /* Dá um pulinho quando ela passa o mouse */
+}

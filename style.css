@@ -8,7 +8,7 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Corta qualquer coisa que tente sair pelos lados */
+    overflow-x: hidden ; /* Corta qualquer coisa que tente sair pelos lados */
     max-width: 100%;
     position: relative;
 }
@@ -23,7 +23,6 @@ body {
 }
 
 .container {
-    overflow-x: hidden; /* Reforço: o que sair do container, o container esconde */
     position: relative; /* ÂNCORA OFICIAL */
     width: 100%;
     min-height: 100vh;
