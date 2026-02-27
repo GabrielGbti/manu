@@ -100,24 +100,28 @@ const folhas = document.querySelector('.folhas3');
 
 girassol.addEventListener('click', () => {
     folhas.classList.add('tremendo');
+    girassol.classList.add('girassol-balancando'); // Adiciona o balanço!
 
     setTimeout(() => {
         folhas.classList.remove('tremendo');
-    }, 400);
+        girassol.classList.remove('girassol-balancando');
+    }, 600); // 600ms pra dar tempo da planta balançar inteira
 });
+
+// ----------------------------------------------------
 
 const girassol2 = document.querySelector('.Girassol2');
 const folhas2 = document.querySelector('.folhas2');
 
 girassol2.addEventListener('click', () => {
     folhas2.classList.add('tremendo');
+    girassol2.classList.add('girassol-balancando'); // Adiciona o balanço!
 
     setTimeout(() => {
         folhas2.classList.remove('tremendo');
-    }, 400);
+        girassol2.classList.remove('girassol-balancando');
+    }, 600);
 });
-
-
 
 
 
