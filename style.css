@@ -343,7 +343,9 @@ img {
 }
 
 
-
+.arranjo-curvado3-container1{
+    display: none;
+}
 
 
 
@@ -404,7 +406,6 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     left: 21%;
     width: 250px;
 }
-
 
 
 
@@ -549,7 +550,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     width: 230px;
 }
 
-.arranjo2-reto-container{
+.arranjo2-reto-container2{
     position: absolute;
     bottom: 2%;
     width: 230px;
@@ -561,8 +562,8 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 .caixa-texto h2 {
     font-family: 'Great Vibes', 'Courier New', Courier, monospace;
-    font-size: clamp(24px, 4vw, 40px); /* Responsivo igual você já sabe fazer! */
-    color: #333; /* Cor do texto (um cinza bem escuro) */
+    font-size: clamp(24px, 4vw, 40px);
+    color: #333;
     text-align: center;
     font-weight: normal;
     max-width: 300px;
@@ -570,8 +571,11 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 }
 
 .texto-container2{
-    top: 40%;
     position: absolute;
+    top: 56%;
+    left: 39%;
+    opacity: 0.5;
+
 }
 
 
@@ -605,6 +609,26 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
+/* =========================================
+CONTAINER TRÊS - AMIGOS
+========================================= */
+
+
+
+
+
+
+
+.amigos{
+    min-height: 100vh;
+    width: 100%; /* Garante que não vai passar da largura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+
+}
 
 
 
@@ -649,6 +673,19 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
         display: block; 
         position: relative; 
     }
+
+    .arranjo-curvado3-container1{
+        display: block;
+        position: absolute  ;
+        width: 500px ;
+        right: 29%;
+        bottom: -13%;
+        transform: rotate(140deg);
+    }
+
+
+
+
 
     .conteudo-central {
         display: flex;
@@ -816,16 +853,64 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
-/* ================= ESTILO DO SEGUNDO CONTAINER ================= */
+    /* ================= ESTILO DO SEGUNDO CONTAINER ================= */
 
 
 
     .gif{
         position: absolute;
-        bottom: 0;
-        left: 45%;
-        width: 280px;
+        bottom: 2%;
+        left: 42%;
+        width: 380px;
     }
+
+    .caixa-texto {
+        position: absolute;
+        width: 90%;
+        max-width: 700px;
+        margin: 80px auto 0;
+        top: 15%;    
+    }
+
+    #texto-digitado {
+        width: 100% !important;
+        max-width: none !important; /* Mata qualquer limite de 300px que o JS ou CSS possa estar forçando */
+        font-size: 30px;
+        text-align: center !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .texto-container2{
+        position: absolute;
+        top: auto;
+        bottom: 270px;
+        left: 50%;
+
+    }
+
+
+    .arranjo1-reto-container2{
+        position: absolute;
+        bottom: 0;
+        width: 420px;
+        left: 41%;
+    }
+
+    .arranjo2-reto-container2{
+        position: absolute; 
+        bottom: -10%;
+        width: 420px;
+        left: 41%;
+        transform: scaleY(-1);
+    }
+
+
+
+
+
+    /* direita */
 
     .girassol-container2{
         right: 90px;
@@ -862,10 +947,100 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     }
 
 
+    .abelha{
+        position: absolute;
+        width: 20%;
+        top: -30px;
+        right: -13px;
+        transform: scaleX(-1) rotate(40deg);
+    }
+
+    .arranjo-curvado-container2{
+        display: none !important;
+    }
 
 
 
 
+
+
+
+    /* esquerda */
+
+    .sol{
+        position: absolute;
+        top: 200px;
+        left: -40px;
+        width: 13%;
+        z-index: 100;
+    }
+
+
+    .arranjo-curvado-container2{
+        position: absolute;
+        transform: rotate(210deg);
+        top: -140px;
+        right: -95px;
+        width: 40%;
+    }
+
+
+    /* As 2 folhas da esquerda */
+
+    .folhas4-container2{
+        position: absolute;
+        width: 120px; /* Era 100px */
+        top: 62%;
+        left: -10px;
+        transform: rotate(28deg);
+
+    }
+
+
+    .folhas5-container2{
+        position: absolute;
+        width: 84px; /* Era 70px */
+        left: -3px;
+        top: 79%;
+        transform: rotate(30deg);
+
+    }
+
+
+    /* As 4 girassois da esquerda */
+
+
+    .girassol4-container2{
+        position: absolute;
+        width: 116px; /* Era 97px */
+        left: 2%;
+        top: 57%;
+        transform: rotate(20deg);
+    }
+
+    .girassol5-container2{
+        position: absolute;
+        width: 78px; /* Era 65px */
+        left: 5%;
+        top: 65%;
+        transform: rotate(36deg);
+    }
+
+    .girassol6-container2{
+        position: absolute;
+        width: 80px; /* Era 67px */
+        left: 0;
+        top: 68%;
+        transform: rotate(4deg);
+    }
+
+    .girassol7-container2{
+        position: absolute;
+        width: 66px; /* Era 55px */
+        left: 37px;
+        top: 76%;
+        transform: rotate(70deg);
+    }
 
 
 
