@@ -71,7 +71,7 @@ if (btnPlay) {
             musica.play();
             btnPlay.src = "img/play-go.png";
             if (textoDicaAudio) {
-                textoDicaAudio.innerText = "agora sim, pode descer 💛💛💛";
+                textoDicaAudio.innerText = "agora sim, pode descer 💛🔊";
                 textoDicaAudio.classList.remove("fonte-normal");
                 textoDicaAudio.classList.add("fonte-romantica");
             }

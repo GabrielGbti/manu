@@ -645,25 +645,67 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* =========================================
-CONTAINER TRÊS - AMIGOS
+======== CONTAINER TRÊS - AMIGOS 
 ========================================= */
 
-
-
-
-
-
-
-.amigos{
+.container-3-amigos {
+    width: 100%;
     min-height: 100vh;
-    width: 100%; /* Garante que não vai passar da largura da tela */
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 20px;
+    padding: 60px 20px;
+    position: relative; /* Mantém como âncora para os futuros enfeites */
+    gap: 80px; /* Espaço bem generoso entre uma amiga e outra */
+}
 
+.texto-container3 {
+    position: relative; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0.8;
+    font-size: 1.5rem; 
+    text-align: center;
+    margin-bottom: -20px; /* Dá uma aproximada do título na primeira foto */
+}
+
+/* ==== ESTRUTURA DAS AMIGAS (Agrupadas!) ======== */
+#marcela, #Estela, #Lele, #Clara, #Tabata {
+    display: flex;
+    flex-direction: column; /* Foto em cima, texto embaixo no celular */
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    z-index: 3; 
+}
+
+/* ==== FOTOS ======== */
+.amiga-marcela, .amiga-estela, .amiga-lele, .amiga-clara, .amiga-tabata {
+    position: relative; 
+    width: 85%; 
+    max-width: 320px; 
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.15); 
+}
+
+/* ==== TEXTOS ======== */
+.texto-marcela, .texto-estela, .texto-lele, .texto-clara, .texto-tabata {
+    position: relative; 
+    width: 90%; 
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    font-family: 'Georgia', serif;
 }
 
 
@@ -673,12 +715,115 @@ CONTAINER TRÊS - AMIGOS
 
 
 
+/* ENFEITES DO TERCEIRO CONTAINER ===== */
+
+    
+
+.folhas1-container3{                /* esquerda *** */
+    position: absolute;
+    width: 120px;
+    top: 110px;
+    left: -30px;
+    transform: scaleX(1) rotate(20deg);
+
+
+}
+
+
+.folhas2-container3{            /* direita *** */
+    position: absolute;
+    width: 100px;
+    right: 45px;
+    top: 2%;
+    transform: scaleX(1) rotate(54deg);
+}
+
+.folhas3-container3{
+    position: absolute;
+    width: 100px;
+    right: 0;
+    top: 22%;
+    transform: scaleX(-1) rotate(40deg);
+}
 
 
 
 
+.folhas4-container3{            /* esquerda *** */
+    position: absolute;
+    width: 100px;
+    left: -29px;
+    top: 12%;
+    transform: scaleX(-1) rotate(-20deg);
+}
 
 
+
+.folhas5-container3{
+    position: absolute;
+    width: 120px;
+    left: 0;
+    top: 22%;
+    transform: scaleX(-1) rotate(10deg);
+}
+
+.folhas6-container3{
+    position: absolute;
+    width: 120px;
+    left: -30px;
+    top: 28%;
+    transform: scaleX(1) rotate(13deg);
+}
+
+
+.folhas7-container3{        /* MEIO *** */
+    position: absolute;
+    width: 70px;
+    top: 42%;
+    transform: rotate(20deg);
+}
+
+.arranjo1-reto-container3{      /* esquerda *** */
+    position: absolute;
+    left: -40%;
+    top: 50%;
+    transform: rotate(90deg);
+
+}
+
+.abelha1-container3{
+    position: absolute;
+    width: 20%;
+    left: 0;
+    top: 40%;
+    transform:scaleX(-1) rotate(140deg)
+}
+
+
+.folhas8-container3{        /* direita *** */
+    position: absolute;
+    width: 75px;
+    top: 50%;
+    right: 0;
+    transform:scaleX(-1) rotate(30deg)
+}
+
+.folhas9-container3{
+    position: absolute;
+    width: 135px;
+    top: 60%;
+    right: 0;
+    transform:scaleX(-1) rotate(140deg)
+
+}
+
+.folhas10-container3{
+    position: absolute;
+    top: 70%;
+    width: 90px;
+    transform:scaleX(-1) rotate(100deg)
+
+}
 
 
 
@@ -967,22 +1112,22 @@ CONTAINER TRÊS - AMIGOS
     .girassol1-container2{
         right: 50px;
         top: 13%;
-        width: 175px;
+        width: 125px;
         z-index: 1;
         transform: rotate(-4deg);
     }
 
     .girassol2-container2{
-        right: 240px;
+        right: 140px;
         top: 34%;
-        width: 205px;
+        width: 105px;
         z-index: 1;
     }
 
     .girassol3-container2{
-        right: 150px;
-        top: 65%;
-        width: 155px;
+        right: 100px;
+        top: 62%;
+        width:105px;
         z-index: 1;
         transform: rotate(-99deg);
     }
@@ -994,9 +1139,9 @@ CONTAINER TRÊS - AMIGOS
 
 
     .folhas1-container2{
-        width: 200px;
-        right: -82px;
-        top: 18%;
+        width: 150px;
+        right: -72px;
+        top: 15%;
         transform: scaleX(-1) rotate(40deg);
         z-index: -1;
 
@@ -1004,7 +1149,7 @@ CONTAINER TRÊS - AMIGOS
 
     .folhas2-container2{
         position: absolute;
-        width: 250px;
+        width: 150px;
         right: -12px;
         top: 30%;
         transform: scaleX(-1) rotate(55deg);
@@ -1013,7 +1158,7 @@ CONTAINER TRÊS - AMIGOS
 
     .folhas3-container2{
         position: absolute;
-        width: 200px;
+        width: 150px;
         right: -82px;
         top: 52%;
         transform: scaleX(-1) rotate(88deg);
@@ -1023,17 +1168,17 @@ CONTAINER TRÊS - AMIGOS
 
     .abelha{
         position: absolute;
-        width: 4%;
-        top: 70%;
-        left: 4%;
+        width: 6%;
+        top: 2%;
+        right: 34%;
         transform: scaleX(1) rotate(-40deg);
 
     }
 
     .abelha2{
         position: absolute;
-        width: 8%;
-        top: 42%;
+        width: 5%;
+        top: 50%;
         right: 40px;
         transform: rotate(100deg);
         z-index: 10;
@@ -1126,6 +1271,71 @@ CONTAINER TRÊS - AMIGOS
         top: 76%;
         transform: rotate(70deg);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ================= ESTILO DO TERCEIRO CONTAINER ================= */ 
+
+    .container-3-amigos{
+        margin-top: 10%;
+
+    }
+
+    .texto-container3 {
+        position: absolute; 
+        top: -2%; 
+        left: 45%; 
+        width: auto; 
+    }
+
+
+    /* Marcela, Lelê e Tabata: Foto na Esquerda, Texto Direita */
+    #marcela, #Lele, #Tabata {
+        flex-direction: row; 
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto; 
+    }
+
+    /* Estela e Clara: Texto na Esquerda, Foto Direita */
+    #Estela, #Clara {
+        flex-direction: row-reverse; 
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Ajuste de tamanho para o PC */
+    .amiga-marcela, .amiga-estela, .amiga-lele, .amiga-clara, .amiga-tabata {
+        width: 40%;
+    }
+
+    .texto-marcela, .texto-estela, .texto-lele, .texto-clara, .texto-tabata {
+        width: 50%;
+        text-align: center; 
+    }
+
+
+
+
+
 
 
 
