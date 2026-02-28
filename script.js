@@ -58,16 +58,6 @@ btnEntrar.onclick = function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 // Pega o áudio e o botão pelo ID
 var musica = document.getElementById("musica");
 var btnPlay = document.getElementById("btn-play");
@@ -76,16 +66,20 @@ var textoDica = document.getElementById("texto-dica");
 
 btnPlay.onclick = function() {
     if (musica.paused) {
-        // Se estiver pausado: Toca a música e troca a foto pro Pause
         musica.play();
         btnPlay.src = "img/play-go.png";
         
-        textoDica.innerText = "agora sim, pode continuar descendo...";
+        textoDica.innerText = "agora sim, pode descer 💛💛💛";
+        textoDica.classList.remove("fonte-normal");
+        textoDica.classList.add("fonte-romantica");
+
     } else {
-        // Se estiver tocando: Pausa a música e volta a foto pro Play
         musica.pause();
         btnPlay.src = "img/play.png";
+        
         textoDica.innerText = "clique no play, sorriso!";
+        textoDica.classList.remove("fonte-romantica");
+        textoDica.classList.add("fonte-normal");
     }
 }
 
@@ -95,33 +89,49 @@ btnPlay.onclick = function() {
 
 
 
-const girassol = document.querySelector('.Girassol1');
-const folhas = document.querySelector('.folhas3');
 
-girassol.addEventListener('click', () => {
-    folhas.classList.add('tremendo');
-    girassol.classList.add('girassol-balancando'); // Adiciona o balanço!
 
-    setTimeout(() => {
-        folhas.classList.remove('tremendo');
-        girassol.classList.remove('girassol-balancando');
-    }, 600); // 600ms pra dar tempo da planta balançar inteira
-});
 
-// ----------------------------------------------------
 
+
+
+// Função inteligente que serve para qualquer girassol e folha
+function ativarAnimacao(girassol, folha) {
+    let tempoAnimacao; // Variável para controlar o tempo e não bugar
+
+    // A mágica acontece aqui
+    function dispararEfeito() {
+        folha.classList.add('tremendo');
+        girassol.classList.add('girassol-balancando');
+
+        clearTimeout(tempoAnimacao); // Reseta o cronômetro se passar o mouse de novo rápido
+        
+        tempoAnimacao = setTimeout(() => {
+            folha.classList.remove('tremendo');
+            girassol.classList.remove('girassol-balancando');
+        }, 600); // Nossos 600ms cravados
+    }
+
+    // 1. Mantém o CLIQUE funcionando perfeitamente (para o Celular)
+    girassol.addEventListener('click', dispararEfeito);
+
+    // 2. Adiciona o PASSAR O MOUSE (mouseenter) exclusivamente para o PC
+    girassol.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024) { // Checa se a tela é de PC
+            dispararEfeito();
+        }
+    });
+}
+
+// Aplicando no Girassol 1
+const girassol1 = document.querySelector('.Girassol1');
+const folhas3 = document.querySelector('.folhas3');
+if (girassol1 && folhas3) ativarAnimacao(girassol1, folhas3);
+
+// Aplicando no Girassol 2
 const girassol2 = document.querySelector('.Girassol2');
 const folhas2 = document.querySelector('.folhas2');
-
-girassol2.addEventListener('click', () => {
-    folhas2.classList.add('tremendo');
-    girassol2.classList.add('girassol-balancando'); // Adiciona o balanço!
-
-    setTimeout(() => {
-        folhas2.classList.remove('tremendo');
-        girassol2.classList.remove('girassol-balancando');
-    }, 600);
-});
+if (girassol2 && folhas2) ativarAnimacao(girassol2, folhas2);
 
 
 
@@ -130,8 +140,23 @@ girassol2.addEventListener('click', () => {
 
 
 
+
+
+
+
+
+
+
+
+
+/* ====================================================
+   MÁQUINA DE ESCREVER COM FADE-IN DO TEXTO
+   ==================================================== */
 const frase = "Seu astral ilumina todos como o sol, Manuela. Por isso te amar é tão fácil. Quer uma prova?";
 const elementoTexto = document.getElementById("texto-digitado");
+
+// Puxando exatamente a CLASSE do seu h6
+const textoContinue = document.querySelector(".efeito-fantasma");
 let jaDigitou = false;
 
 function efeitoMaquina(texto, elemento, velocidade) {
@@ -143,6 +168,11 @@ function efeitoMaquina(texto, elemento, velocidade) {
             elemento.textContent += texto.charAt(i);
             i++;
             setTimeout(digitar, velocidade);
+        } else {
+            // A MÁGICA: Acabou de digitar a frase? Acende o h6!
+            if (textoContinue) {
+                textoContinue.classList.add("aparecer");
+            }
         }
     }
     digitar();
@@ -150,6 +180,7 @@ function efeitoMaquina(texto, elemento, velocidade) {
 
 const observador = new IntersectionObserver((entradas) => {
     entradas.forEach(entrada => {
+        // Usa o siteLiberado para garantir que a tela inicial já passou
         if (entrada.isIntersecting && !jaDigitou && siteLiberado) {
             jaDigitou = true;
             efeitoMaquina(frase, elementoTexto, 80);

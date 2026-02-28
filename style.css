@@ -72,6 +72,16 @@ body {
     transition: transform 0.2s ease; /* Dá um efeitinho suave */
 }
 
+.fonte-romantica {
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+}
+
+.fonte-normal {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
 /* Efeito bônus: o botão dá uma leve afundada quando clica */
 .player:active {
     transform: scale(0.95);
@@ -408,6 +418,9 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 }
 
 
+/* Deixa o texto invisível no começo e prepara a transição suave */
+
+
 
 
 /* As 3 girassois da direita */
@@ -578,6 +591,14 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 }
 
+.efeito-fantasma {
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out;
+}
+
+.efeito-fantasma.aparecer {
+    opacity: 0.6;
+}
 
 /* O efeitinho da barrinha de texto piscando */
 .cursor {
@@ -751,8 +772,8 @@ CONTAINER TRÊS - AMIGOS
         left: auto; /* Só por garantia, se você tiver usado left lá */
         /* 2. Agora sim ele vai obedecer as suas regras novas! */
         left: -370px; /* -700px me pareceu muito, ele vai sumir da tela! Reduzi pra testar */
-        bottom: -250px;
-        transform: rotate(35deg);
+        bottom: -210px;
+        transform: rotate(55deg);
         width: 600px;
     }
 
@@ -885,8 +906,8 @@ CONTAINER TRÊS - AMIGOS
     .texto-container2{
         position: absolute;
         top: auto;
-        bottom: 270px;
-        left: 50%;
+        bottom: 50%;
+        left: 49%;
 
     }
 
@@ -912,47 +933,80 @@ CONTAINER TRÊS - AMIGOS
 
     /* direita */
 
-    .girassol-container2{
-        right: 90px;
-        bottom: 260px;
-        width: 155px;
+    .girassol1-container2{
+        right: 50px;
+        top: 13%;
+        width: 175px;
+        z-index: 1;
+        transform: rotate(-4deg);
+    }
+
+    .girassol2-container2{
+        right: 240px;
+        top: 34%;
+        width: 205px;
         z-index: 1;
     }
 
+    .girassol3-container2{
+        right: 150px;
+        top: 65%;
+        width: 155px;
+        z-index: 1;
+        transform: rotate(-99deg);
+    }
+
+
+
+
+
+
+
     .folhas1-container2{
-        width: 150px;
-        right: -12px;
-        top: 8%;
-        transform: rotate(-28deg);
+        width: 200px;
+        right: -82px;
+        top: 18%;
+        transform: scaleX(-1) rotate(40deg);
         z-index: -1;
 
     }
 
     .folhas2-container2{
         position: absolute;
-        width: 150px;
+        width: 250px;
         right: -12px;
-        top: 40%;
-        transform: rotate(-35deg);
-
+        top: 30%;
+        transform: scaleX(-1) rotate(55deg);
 
     }
 
     .folhas3-container2{
         position: absolute;
-        width: 150px;
-        right: -12px;
-        top: 80%;
-        transform: rotate(-28deg);
+        width: 200px;
+        right: -82px;
+        top: 52%;
+        transform: scaleX(-1) rotate(88deg);
+
     }
 
 
     .abelha{
         position: absolute;
-        width: 20%;
-        top: -30px;
-        right: -13px;
-        transform: scaleX(-1) rotate(40deg);
+        width: 4%;
+        top: 70%;
+        left: 4%;
+        transform: scaleX(1) rotate(-40deg);
+
+    }
+
+    .abelha2{
+        position: absolute;
+        width: 8%;
+        top: 42%;
+        right: 40px;
+        transform: rotate(100deg);
+        z-index: 10;
+
     }
 
     .arranjo-curvado-container2{
@@ -969,9 +1023,9 @@ CONTAINER TRÊS - AMIGOS
 
     .sol{
         position: absolute;
-        top: 200px;
-        left: -40px;
-        width: 13%;
+        top: -15%;
+        left: -60px;
+        width: 23%;
         z-index: 100;
     }
 
