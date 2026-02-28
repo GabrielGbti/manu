@@ -58,28 +58,32 @@ btnEntrar.onclick = function() {
 
 
 
-// Pega o áudio e o botão pelo ID
+// ==========================================
+// PLAYER DE ÁUDIO
+// ==========================================
 var musica = document.getElementById("musica");
 var btnPlay = document.getElementById("btn-play");
-var textoDica = document.getElementById("texto-dica");
+var textoDicaAudio = document.getElementById("texto-dica"); // O texto embaixo do play
 
-
-btnPlay.onclick = function() {
-    if (musica.paused) {
-        musica.play();
-        btnPlay.src = "img/play-go.png";
-        
-        textoDica.innerText = "agora sim, pode descer 💛💛💛";
-        textoDica.classList.remove("fonte-normal");
-        textoDica.classList.add("fonte-romantica");
-
-    } else {
-        musica.pause();
-        btnPlay.src = "img/play.png";
-        
-        textoDica.innerText = "clique no play, sorriso!";
-        textoDica.classList.remove("fonte-romantica");
-        textoDica.classList.add("fonte-normal");
+if (btnPlay) {
+    btnPlay.onclick = function() {
+        if (musica.paused) {
+            musica.play();
+            btnPlay.src = "img/play-go.png";
+            if (textoDicaAudio) {
+                textoDicaAudio.innerText = "agora sim, pode descer 💛💛💛";
+                textoDicaAudio.classList.remove("fonte-normal");
+                textoDicaAudio.classList.add("fonte-romantica");
+            }
+        } else {
+            musica.pause();
+            btnPlay.src = "img/play.png";
+            if (textoDicaAudio) {
+                textoDicaAudio.innerText = "clique no play, sorriso!";
+                textoDicaAudio.classList.remove("fonte-romantica");
+                textoDicaAudio.classList.add("fonte-normal");
+            }
+        }
     }
 }
 
@@ -94,45 +98,51 @@ btnPlay.onclick = function() {
 
 
 
-
-// Função inteligente que serve para qualquer girassol e folha
+// Função inteligente de MÃO DUPLA (Girassol <-> Folha)
 function ativarAnimacao(girassol, folha) {
-    let tempoAnimacao; // Variável para controlar o tempo e não bugar
+    let tempoAnimacao;
 
-    // A mágica acontece aqui
+    // A mágica: os dois balançam juntos
     function dispararEfeito() {
         folha.classList.add('tremendo');
         girassol.classList.add('girassol-balancando');
 
-        clearTimeout(tempoAnimacao); // Reseta o cronômetro se passar o mouse de novo rápido
+        clearTimeout(tempoAnimacao); 
         
         tempoAnimacao = setTimeout(() => {
             folha.classList.remove('tremendo');
             girassol.classList.remove('girassol-balancando');
-        }, 600); // Nossos 600ms cravados
+        }, 600);
     }
 
-    // 1. Mantém o CLIQUE funcionando perfeitamente (para o Celular)
-    girassol.addEventListener('click', dispararEfeito);
+    // ==========================================
+    // FORÇA BRUTA: Transforma a folha em um "botão" clicável ignorando o CSS!
+    // ==========================================
+    folha.style.pointerEvents = "auto";
+    folha.style.cursor = "pointer";
 
-    // 2. Adiciona o PASSAR O MOUSE (mouseenter) exclusivamente para o PC
+    // 1. Gatilhos se encostar no GIRASSOL
+    girassol.addEventListener('click', dispararEfeito);
     girassol.addEventListener('mouseenter', () => {
-        if (window.innerWidth >= 1024) { // Checa se a tela é de PC
-            dispararEfeito();
-        }
+        if (window.innerWidth >= 1024) dispararEfeito();
+    });
+
+    // 2. Gatilhos se encostar na FOLHA (O INVERSO!)
+    folha.addEventListener('click', dispararEfeito);
+    folha.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024) dispararEfeito();
     });
 }
 
-// Aplicando no Girassol 1
+// Aplicando no Girassol 1 e Folhas 3
 const girassol1 = document.querySelector('.Girassol1');
 const folhas3 = document.querySelector('.folhas3');
 if (girassol1 && folhas3) ativarAnimacao(girassol1, folhas3);
 
-// Aplicando no Girassol 2
+// Aplicando no Girassol 2 e Folhas 2
 const girassol2 = document.querySelector('.Girassol2');
 const folhas2 = document.querySelector('.folhas2');
 if (girassol2 && folhas2) ativarAnimacao(girassol2, folhas2);
-
 
 
 

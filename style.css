@@ -113,6 +113,7 @@ font-size: 20px;
     min-height: 100vh;
     align-content: center; 
     position: relative; /* Âncora para ícones internos */
+    z-index: 10;
 }
 
 img {
@@ -160,14 +161,11 @@ img {
 
 
 
-
 /* =========================================
    BASE DOS ENFEITES (Geral)
 ========================================= */
 .enfeite {
     position: absolute;
-    z-index: -1; 
-    pointer-events: none;
 }
 
 
@@ -201,7 +199,7 @@ img {
     top: 9%; 
     left: -40px; 
     width: 210px; 
-    z-index: 1; 
+    z-index: 10; 
 
 }
 
@@ -269,7 +267,11 @@ img {
 
 
 
-
+.folhas2, .folhas3 {
+    pointer-events: auto !important; 
+    cursor: pointer !important;
+    z-index: 1 !important; 
+}
 
 
 
@@ -300,6 +302,7 @@ img {
     -webkit-tap-highlight-color: transparent; 
     -webkit-touch-callout: none;
     user-select: none;
+    z-index: 2;
 }
 
 .girassol1-animado {
@@ -314,12 +317,24 @@ img {
     -webkit-tap-highlight-color: transparent; 
     -webkit-touch-callout: none;
     user-select: none;
+    z-index: 20;
 
 }
 
 .girassol2-animado {
     transform: scale(0.9);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes balancarPlanta {
@@ -695,6 +710,24 @@ CONTAINER TRÊS - AMIGOS
         position: relative; 
     }
 
+
+
+    .player, #btn-play {
+        position: relative; /* Ou absolute, dependendo do seu layout */
+        z-index: 999 !important; 
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+
+    /* Garante que o texto embaixo do play também seja clicável */
+    .texto-play {
+        position: relative;
+        z-index: 999 !important;
+    }
+
+
+
+
     .arranjo-curvado3-container1{
         display: block;
         position: absolute  ;
@@ -841,8 +874,6 @@ CONTAINER TRÊS - AMIGOS
         top: 40%; 
         left: 0; 
         width: 210px; 
-        z-index: 1; 
-
     }
 
 
