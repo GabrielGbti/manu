@@ -863,38 +863,43 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 /* ============================= > TABATA < = */
 
-.arranjo-curvado-container3{        /* esquerda *** */
+.sol-container3{        /* esquerda *** */
     position: absolute;
-    bottom: 15%;
-    left: 5%;
-    transform:scaleX(-1) rotate(2deg);
-    width: 140px;
+    bottom: 16%;
+    left: -20px;
+    transform:scaleX(1) rotate(2deg);
+    width: 180px;
 
 }
 .folhas11-container3{               /* esquerda *** */
     position: absolute;
-    bottom: 9%;
+    bottom: 8%;
     width: 80px;
     left: 10px;
-    transform:scaleX(-1) rotate(-80deg);
+    transform:scaleX(-1) rotate(20deg);
 
 }
 .folhas12-container3{               /* direita *** */
     position: absolute;
-    bottom: 11%;
+    bottom: 15%;
     width: 90px;
     right: 0;
-    transform:scaleX(-1) rotate(-60deg);
+    transform:scaleX(1) rotate(-70deg);
 }
 .folhas13-container3{               /* esquerda *** */
     position: absolute;
-    bottom: 3%;
+    bottom: 8%;
     right: 10px;
     width: 100px;
-    transform:scaleX(1) rotate(120deg);
+    transform:scaleX(-1) rotate(50deg);
 }
 
-
+.girassol6-container3{
+    position: absolute;
+    bottom: 18%;
+    width: 63px;
+    right: 110px;
+}
 
 
 
@@ -1138,10 +1143,10 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     #texto-digitado {
         width: 100% !important;
         max-width: none !important; /* Mata qualquer limite de 300px que o JS ou CSS possa estar forçando */
-        font-size: 30px;
+        font-size: 40px;
         text-align: center !important;
         display: block;
-        margin: 0 auto;
+        margin-left: 50px;
     }
 
 
@@ -1149,7 +1154,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
         position: absolute;
         top: auto;
         bottom: 50%;
-        left: 49%;
+        left: 50%;
 
     }
 
@@ -1367,9 +1372,12 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     .texto-container3 {
         position: absolute; 
         top: -2%; 
-        left: 45%; 
-        width: auto; 
+        left: 43%; 
+        width: auto;
+        font-family: monospace;
+        font-size: 30px; 
     }
+    
 
 
     /* Marcela, Lelê e Tabata: Foto na Esquerda, Texto Direita */
@@ -1424,9 +1432,11 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     .folhas3-container3{            /* esquerda *** */
         position: absolute;
         width: 200px;
-        left: -29px;
+        left: -99px;
         top: 12%;
         transform: scaleX(1) rotate(60deg);
+
+        display: none;
 
     }
 
@@ -1446,6 +1456,8 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
         right: 0;
         top: 22%;
         transform: scaleX(-1) rotate(40deg);
+
+        display: none;
     }
     .folhas5-container3{            /* esquerda *** */
         position: absolute;
@@ -1482,81 +1494,71 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     }
     .abelha1-container3{            /* esquerda *** */
         position: absolute;
-        width: 10%;
-        left: 50px;
-        top: 43%;
+        width: 7%;
+        left: 80px;
+        top: 55%;
         transform:scaleX(-1) rotate(90deg);
 
-        display: none;
     }
     .folhas8-container3{        /* direita *** */
         position: absolute;
-        width: 175px;
+        width: 275px;
         top: 54%;
         right: 0;
         transform:scaleX(-1) rotate(80deg);
 
-        display: none;
 
     }
 
-    .girassol2-container3{          /* meio *** */
+    .girassol2-container3{          /* direita *** */
         position: absolute;
-        width: 165px;
+        width: 205px;
         right: 90px;
-        top: 40%;
-
-        display: none;
+        top: 38%;
 
     }
-    .girassol3-container3{          /* meio *** */
-        position: absolute;
-        width: 90px;
-        right: 60%;
-        top: 43%;
 
-        display: none;
+    .girassol3-container3{          /* esquerda *** */
+        position: absolute;
+        width: 233px;
+        left: 10%;
+        top: 1%;
 
     }
 
 
     /* ============================= > CLARA < = */
 
-    .folhas9-container3{            /* direita *** */
+    .folhas9-container3{            /* direita   ta na tabata*** */
         position: absolute;
         width: 135px;
-        top: 60%;
+        top: 79%;
         right: 0;
         transform:scaleX(-1) rotate(140deg);
 
-        display: none;
     }
-    .folhas10-container3{           /* MEIO *** */
+    .folhas10-container3{           /* esquerda *** */
         position: absolute;
-        bottom: 24%;
-        width: 90px;
-        transform:scaleX(-1) rotate(120deg);
+        bottom: 8%;
+        width: 190px;
+        transform:scaleX(1) rotate(60deg);
+        left: 10px;
         
-        display: none;
-
     }
 
     .girassol4-container3{              /* direita *** */
         position: absolute;
-        width: 93px;
-        bottom: 30%;
-        left: 1%;
-
-        display: none;
-
+        width: 265px;
+        right: 15%;
+        top: 57%;
+        left: auto;
     }
-    .girassol5-container3{          /* direita *** */
+    .girassol5-container3{          /* esquerda *** */
         position: absolute;
-        width: 60px;
-        bottom: 25%;
-        left: 21%;
-
-        display: none;
+        width: 260px;
+        bottom: 18%;
+        left: 11%;
+        transform: rotate(30deg);
 
     }
 
@@ -1564,7 +1566,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     /* ============================= > TABATA < = */
 
-    .arranjo-curvado-container3{        /* esquerda *** */
+    .sol-container3{        /* esquerda *** */
         position: absolute;
         bottom: 15%;
         left: 5%;
@@ -1604,6 +1606,14 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
         display: none;
 
     }
+    .girassol6-container3{              /* direita *** */
+        position: absolute;
+        bottom: 7%;
+        width: 163px;
+        right: 110px;
+
+    }
+
 
 
 
