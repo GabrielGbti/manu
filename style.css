@@ -198,7 +198,7 @@ img {
 .Girassol2 { 
     top: 9%; 
     left: -40px; 
-    width: 210px; 
+    width: 190px; 
     z-index: 10; 
 
 }
@@ -212,10 +212,10 @@ img {
     right: -16px; 
     transform: translate(-50%, -50%); 
     width: 50px; 
-    z-index: 2; 
+    z-index: 100; 
 
 }
-.Livros { top: 65%; right: 10px; width: 60px; z-index: 2; }
+.Livros { top: 65%; right: 10px; width: 60px; z-index: 100; }
 
 
 
@@ -600,7 +600,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 .texto-container2{
     position: absolute;
-    top: 56%;
+    bottom: 49%;    
     left: 39%;
     opacity: 0.5;
 
@@ -715,9 +715,10 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
-/* ENFEITES DO TERCEIRO CONTAINER ===== */
+/* ===============================>>>>     ENFEITES DO TERCEIRO CONTAINER ===== */
 
     
+/* ============================= > MARCELA < = */
 
 .folhas1-container3{                /* esquerda *** */
     position: absolute;
@@ -728,8 +729,6 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 }
-
-
 .folhas2-container3{            /* direita *** */
     position: absolute;
     width: 100px;
@@ -737,37 +736,42 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     top: 2%;
     transform: scaleX(1) rotate(54deg);
 }
+.folhas3-container3{            /* esquerda *** */
+    position: absolute;
+    width: 100px;
+    left: -29px;
+    top: 12%;
+    transform: scaleX(-1) rotate(-20deg);
 
-.folhas3-container3{
+}
+
+.girassol1-container3{       /* direita *** */
+    position: absolute;
+    width: 70px;
+    right: -18px;
+    top: 2%;
+}
+
+
+
+
+/* ============================= > ESTELA < = */
+
+.folhas4-container3{            /* direita *** */
     position: absolute;
     width: 100px;
     right: 0;
     top: 22%;
     transform: scaleX(-1) rotate(40deg);
 }
-
-
-
-
-.folhas4-container3{            /* esquerda *** */
-    position: absolute;
-    width: 100px;
-    left: -29px;
-    top: 12%;
-    transform: scaleX(-1) rotate(-20deg);
-}
-
-
-
-.folhas5-container3{
+.folhas5-container3{            /* esquerda *** */
     position: absolute;
     width: 120px;
     left: 0;
     top: 22%;
     transform: scaleX(-1) rotate(10deg);
 }
-
-.folhas6-container3{
+.folhas6-container3{            /* esquerda *** */
     position: absolute;
     width: 120px;
     left: -30px;
@@ -776,13 +780,16 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 }
 
 
+
+
+/* ============================= > LELE < = */
+
 .folhas7-container3{        /* MEIO *** */
     position: absolute;
     width: 70px;
     top: 42%;
     transform: rotate(20deg);
 }
-
 .arranjo1-reto-container3{      /* esquerda *** */
     position: absolute;
     left: -40%;
@@ -790,43 +797,102 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     transform: rotate(90deg);
 
 }
-
-.abelha1-container3{
+.abelha1-container3{            /* esquerda *** */
     position: absolute;
     width: 20%;
     left: 0;
     top: 40%;
-    transform:scaleX(-1) rotate(140deg)
+    transform:scaleX(-1) rotate(140deg);
 }
-
-
 .folhas8-container3{        /* direita *** */
     position: absolute;
     width: 75px;
     top: 50%;
     right: 0;
-    transform:scaleX(-1) rotate(30deg)
+    transform:scaleX(-1) rotate(30deg);
 }
 
-.folhas9-container3{
+.girassol2-container3{          /* meio *** */
+    position: absolute;
+    width: 65px;
+    right: 40%;
+    top: 42%;
+}
+.girassol3-container3{          /* meio *** */
+    position: absolute;
+    width: 90px;
+    right: 60%;
+    top: 43%;
+}
+
+
+
+/* ============================= > CLARA < = */
+
+.folhas9-container3{            /* direita *** */
     position: absolute;
     width: 135px;
     top: 60%;
     right: 0;
-    transform:scaleX(-1) rotate(140deg)
+    transform:scaleX(-1) rotate(140deg);
 
 }
-
-.folhas10-container3{
+.folhas10-container3{           /* MEIO *** */
     position: absolute;
-    top: 70%;
+    bottom: 24%;
     width: 90px;
-    transform:scaleX(-1) rotate(100deg)
+    transform:scaleX(-1) rotate(120deg);
+
+}
+
+.girassol4-container3{              /* direita *** */
+    position: absolute;
+    width: 93px;
+    bottom: 30%;
+    left: 1%;
+}
+.girassol5-container3{          /* direita *** */
+    position: absolute;
+    width: 60px;
+    bottom: 25%;
+    left: 21%;
 
 }
 
 
 
+/* ============================= > TABATA < = */
+
+.arranjo-curvado-container3{        /* esquerda *** */
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    transform:scaleX(-1) rotate(2deg);
+    width: 140px;
+
+}
+.folhas11-container3{               /* esquerda *** */
+    position: absolute;
+    bottom: 9%;
+    width: 80px;
+    left: 10px;
+    transform:scaleX(-1) rotate(-80deg);
+
+}
+.folhas12-container3{               /* direita *** */
+    position: absolute;
+    bottom: 11%;
+    width: 90px;
+    right: 0;
+    transform:scaleX(-1) rotate(-60deg);
+}
+.folhas13-container3{               /* esquerda *** */
+    position: absolute;
+    bottom: 3%;
+    right: 10px;
+    width: 100px;
+    transform:scaleX(1) rotate(120deg);
+}
 
 
 
@@ -1334,10 +1400,210 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
+    /* =========>>>>     ENFEITES DO TERCEIRO CONTAINER ===== */
+
+        
+    /* ============================= > MARCELA < = */
+
+    .folhas1-container3{                /* esquerda *** */
+        position: absolute;
+        width: 220px;
+        top: 10px;
+        left: -30px;
+        transform: scaleX(1) rotate(60deg);
+
+
+    }
+    .folhas2-container3{            /* direita *** */
+        position: absolute;
+        width: 200px;
+        right: 45px;
+        top: 2%;
+        transform: scaleX(-1) rotate(54deg);
+    }
+    .folhas3-container3{            /* esquerda *** */
+        position: absolute;
+        width: 200px;
+        left: -29px;
+        top: 12%;
+        transform: scaleX(1) rotate(60deg);
+
+    }
+
+    .girassol1-container3{       /* direita *** */
+        position: absolute;
+        width: 170px;
+        right: 200px;
+        top: 2%;
+    }
+
+
+    /* ============================= > ESTELA < = */
+
+    .folhas4-container3{            /* direita *** */
+        position: absolute;
+        width: 243px;
+        right: 0;
+        top: 22%;
+        transform: scaleX(-1) rotate(40deg);
+    }
+    .folhas5-container3{            /* esquerda *** */
+        position: absolute;
+        width: 220px;
+        left: 0;
+        top: 26%;
+        transform: scaleX(-1) rotate(-90deg);
+    }
+    .folhas6-container3{            /* esquerda *** */
+        position: absolute;
+        width: 150px;
+        left: 40%;
+        top: 33%;
+        transform: scaleX(1) rotate(73deg);
+    }
+
+
+    /* ============================= > LELE < = */
+
+    .folhas7-container3{        /* MEIO *** */
+        position: absolute;
+        width: 170px;
+        top: 42%;
+        right: 1px;
+        transform: scaleX(-1) rotate(30deg);
+    }
+    .arranjo1-reto-container3{      /* esquerda *** */
+        position: absolute;
+        width: 700px;
+        left: -14%;
+        top: 50%;
+        transform: rotate(90deg);
+
+    }
+    .abelha1-container3{            /* esquerda *** */
+        position: absolute;
+        width: 10%;
+        left: 50px;
+        top: 43%;
+        transform:scaleX(-1) rotate(90deg);
+
+        display: none;
+    }
+    .folhas8-container3{        /* direita *** */
+        position: absolute;
+        width: 175px;
+        top: 54%;
+        right: 0;
+        transform:scaleX(-1) rotate(80deg);
+
+        display: none;
+
+    }
+
+    .girassol2-container3{          /* meio *** */
+        position: absolute;
+        width: 165px;
+        right: 90px;
+        top: 40%;
+
+        display: none;
+
+    }
+    .girassol3-container3{          /* meio *** */
+        position: absolute;
+        width: 90px;
+        right: 60%;
+        top: 43%;
+
+        display: none;
+
+    }
+
+
+    /* ============================= > CLARA < = */
+
+    .folhas9-container3{            /* direita *** */
+        position: absolute;
+        width: 135px;
+        top: 60%;
+        right: 0;
+        transform:scaleX(-1) rotate(140deg);
+
+        display: none;
+    }
+    .folhas10-container3{           /* MEIO *** */
+        position: absolute;
+        bottom: 24%;
+        width: 90px;
+        transform:scaleX(-1) rotate(120deg);
+        
+        display: none;
+
+    }
+
+    .girassol4-container3{              /* direita *** */
+        position: absolute;
+        width: 93px;
+        bottom: 30%;
+        left: 1%;
+
+        display: none;
+
+    }
+    .girassol5-container3{          /* direita *** */
+        position: absolute;
+        width: 60px;
+        bottom: 25%;
+        left: 21%;
+
+        display: none;
+
+    }
 
 
 
+    /* ============================= > TABATA < = */
 
+    .arranjo-curvado-container3{        /* esquerda *** */
+        position: absolute;
+        bottom: 15%;
+        left: 5%;
+        transform:scaleX(-1) rotate(2deg);
+        width: 140px;
+
+        display: none;
+
+    }
+    .folhas11-container3{               /* esquerda *** */
+        position: absolute;
+        bottom: 9%;
+        width: 80px;
+        left: 10px;
+        transform:scaleX(-1) rotate(-80deg);
+
+        display: none;
+
+    }
+    .folhas12-container3{               /* direita *** */
+        position: absolute;
+        bottom: 11%;
+        width: 90px;
+        right: 0;
+        transform:scaleX(-1) rotate(-60deg);
+
+        display: none;
+
+    }
+    .folhas13-container3{               /* esquerda *** */
+        position: absolute;
+        bottom: 3%;
+        right: 10px;
+        width: 100px;
+        transform:scaleX(1) rotate(120deg);
+
+        display: none;
+
+    }
 
 
 
