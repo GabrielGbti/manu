@@ -267,7 +267,7 @@ img {
 
 
 
-.folhas2, .folhas3 {
+.folhas1, .folhas2, .folhas3 {
     pointer-events: auto !important; 
     cursor: pointer !important;
     z-index: 1 !important; 
@@ -362,8 +362,6 @@ img {
 }
 
 .tremendo {
-    /* 0.1s infinite: Ela vai vibrar muito rápido sem parar, 
-       até o JavaScript ir lá e arrancar essa classe depois dos 600ms! */
     animation: tremerFolhas 1.1s infinite; 
 }
 
@@ -373,12 +371,27 @@ img {
 }
 
 
+/* Animação exclusiva para a folhas1 que já tem transform complexo */
+@keyframes tremerFolhas1 {
+    0%   { transform: rotate(-38deg) scaleX(-1) translate(0px, 0px); }
+    25%  { transform: rotate(-38deg) scaleX(-1) translate(-2px, 2px); }
+    50%  { transform: rotate(-38deg) scaleX(-1) translate(2px, -1px); }
+    75%  { transform: rotate(-38deg) scaleX(-1) translate(-1px, -2px); }
+    100% { transform: rotate(-38deg) scaleX(-1) translate(0px, 0px); }
+}
+
+/* Classe que o JS vai chamar */
+.tremendo-folhas1 {
+    animation: tremerFolhas1 0.8s infinite !important; 
+}
+
+
 
 
 
 
 /* =========================================
-CONTAINER DOIS - MÁQUINA DE ESCREVER
+=========================================>>>>>>>>>>>       CONTAINER DOIS - MÁQUINA DE ESCREVER
 ========================================= */
 
 
@@ -587,15 +600,12 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
-
 .caixa-texto h2 {
     font-family: 'Great Vibes', 'Courier New', Courier, monospace;
-    font-size: clamp(24px, 4vw, 40px);
     color: #333;
     text-align: center;
     font-weight: normal;
-    max-width: 300px;
-    height: 80vh; 
+    
 }
 
 .texto-container2{
@@ -1001,6 +1011,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     .Livros {
         top: 50%;
         left: 15%;
+        bottom: auto;
     }
 
     .psicologia {
@@ -1016,11 +1027,9 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
     }
 
     .arranjo-curvado2 {
-        /* 1. Desliga as regras que vieram do celular */
         top: auto; 
-        left: auto; /* Só por garantia, se você tiver usado left lá */
-        /* 2. Agora sim ele vai obedecer as suas regras novas! */
-        left: -370px; /* -700px me pareceu muito, ele vai sumir da tela! Reduzi pra testar */
+        left: auto; 
+        left: -370px; 
         bottom: -210px;
         transform: rotate(55deg);
         width: 600px;
@@ -1075,6 +1084,13 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
+
+
+
+
+
+    
+
     /* ANIMAÇÕES */
 
 
@@ -1121,6 +1137,13 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
 
 
+
+
+
+
+
+
+
     /* ================= ESTILO DO SEGUNDO CONTAINER ================= */
 
 
@@ -1134,26 +1157,25 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .caixa-texto {
         position: absolute;
-        width: 90%;
-        max-width: 700px;
+        max-width: 60%;
         margin: 80px auto 0;
-        top: 15%;    
+        top: 15%;
     }
 
     #texto-digitado {
         width: 100% !important;
-        max-width: none !important; /* Mata qualquer limite de 300px que o JS ou CSS possa estar forçando */
-        font-size: 40px;
+        font-size: 200%;
         text-align: center !important;
         display: block;
         margin-left: 50px;
+        white-space: pre-line !important;
     }
 
 
     .texto-container2{
         position: absolute;
         top: auto;
-        bottom: 50%;
+        bottom: 60%;
         left: 50%;
 
     }
@@ -1270,9 +1292,9 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .sol{
         position: absolute;
-        top: -15%;
+        top: 15%;
         left: -60px;
-        width: 23%;
+        width: 12%;
         z-index: 100;
     }
 
@@ -1290,7 +1312,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .folhas4-container2{
         position: absolute;
-        width: 120px; /* Era 100px */
+        width: 120px;
         top: 62%;
         left: -10px;
         transform: rotate(28deg);
@@ -1300,7 +1322,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .folhas5-container2{
         position: absolute;
-        width: 84px; /* Era 70px */
+        width: 84px;
         left: -3px;
         top: 79%;
         transform: rotate(30deg);
@@ -1313,7 +1335,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .girassol4-container2{
         position: absolute;
-        width: 116px; /* Era 97px */
+        width: 116px; 
         left: 2%;
         top: 57%;
         transform: rotate(20deg);
@@ -1321,7 +1343,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .girassol5-container2{
         position: absolute;
-        width: 78px; /* Era 65px */
+        width: 78px;
         left: 5%;
         top: 65%;
         transform: rotate(36deg);
@@ -1329,7 +1351,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .girassol6-container2{
         position: absolute;
-        width: 80px; /* Era 67px */
+        width: 80px;
         left: 0;
         top: 68%;
         transform: rotate(4deg);
@@ -1337,7 +1359,7 @@ CONTAINER DOIS - MÁQUINA DE ESCREVER
 
     .girassol7-container2{
         position: absolute;
-        width: 66px; /* Era 55px */
+        width: 66px;
         left: 37px;
         top: 76%;
         transform: rotate(70deg);

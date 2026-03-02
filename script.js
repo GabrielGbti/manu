@@ -96,6 +96,34 @@ if (btnPlay) {
 
 
 
+// ==========================================
+// EFEITO ISOLADO: Apenas para a Folhas 1 (Primeiro Container)
+// ==========================================
+const folha1 = document.querySelector('.folhas1');
+
+if (folha1) {
+    let tempoFolha1;
+
+    function tremerFolha1() {
+        // Usa a NOVA classe que não briga com o transform original
+        folha1.classList.add('tremendo-folhas1');
+        
+        clearTimeout(tempoFolha1); 
+        
+        tempoFolha1 = setTimeout(() => {
+            folha1.classList.remove('tremendo-folhas1');
+        }, 600);
+    }
+
+    // Gatilhos
+    folha1.addEventListener('click', tremerFolha1);
+    
+    folha1.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 1024) tremerFolha1();
+    });
+}
+
+
 
 
 // Função inteligente de MÃO DUPLA (Girassol <-> Folha)
@@ -159,10 +187,15 @@ if (girassol2 && folhas2) ativarAnimacao(girassol2, folhas2);
 
 
 
+
+
+
+
+
 /* ====================================================
    MÁQUINA DE ESCREVER COM FADE-IN DO TEXTO
    ==================================================== */
-const frase = "Seu astral ilumina todos como o sol, Manuela. Por isso te amar é tão fácil. Quer uma prova?";
+const frase = "Seu astral ilumina todos como o sol, Manuela.\nPor isso te amar é tão fácil. Quer uma prova?";
 const elementoTexto = document.getElementById("texto-digitado");
 
 // Puxando exatamente a CLASSE do seu h6
