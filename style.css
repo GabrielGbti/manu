@@ -413,11 +413,14 @@ img {
     text-align: center;
     font-weight: normal;
     top: 19%;
-    width: 90%;
+    width: 80%;
 }
 
 #texto-digitado {
     font-size: large;
+    opacity: 0.9;
+    font-size: 20px;
+
 }
 
 .texto-container2{
