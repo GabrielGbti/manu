@@ -274,3 +274,83 @@ enfeitesContainer2.forEach((enfeite) => {
 
 
 
+
+
+
+
+
+// ==========================================
+//  =======> ANIMAÇÕES CONTAINER 3 --- AMIGOS  <=======
+// ==========================================
+
+
+// ==========================================================
+// PARES DE ANIMAÇÃO (MÃO DUPLA) - CONTAINER 3 para o midia pc after
+// ==========================================================
+
+// ============================= > MARCELA < =
+const girassol1_c3 = document.querySelector('.girassol1-container3');
+const folhas2_c3 = document.querySelector('.folhas2-container3');
+if (girassol1_c3 && folhas2_c3) ativarAnimacao(girassol1_c3, folhas2_c3);
+
+const girassol3_c3 = document.querySelector('.girassol3-container3');
+const folhas1_c3 = document.querySelector('.folhas1-container3');
+if (girassol3_c3 && folhas1_c3) ativarAnimacao(girassol3_c3, folhas1_c3);
+
+
+
+
+
+
+// ============================= > LELE < =
+const girassol2_c3 = document.querySelector('.girassol2-container3');
+const folhas7_c3 = document.querySelector('.folhas7-container3');
+if (girassol2_c3 && folhas7_c3) ativarAnimacao(girassol2_c3, folhas7_c3);
+
+
+
+
+
+// ============================= > CLARA < =
+const girassol4_c3 = document.querySelector('.girassol4-container3');
+const folhas8_c3 = document.querySelector('.folhas8-container3');
+if (girassol4_c3 && folhas8_c3) ativarAnimacao(girassol4_c3, folhas8_c3);
+
+
+
+
+
+
+// ============================= > TABATA < =
+const girassol5_c3 = document.querySelector('.girassol5-container3');
+const folhas10_c3 = document.querySelector('.folhas10-container3');
+if (girassol5_c3 && folhas10_c3) ativarAnimacao(girassol5_c3, folhas10_c3);
+
+const girassol6_c3 = document.querySelector('.girassol6-container3');
+const folhas9_c3 = document.querySelector('.folhas9-container3');
+if (girassol6_c3 && folhas9_c3) ativarAnimacao(girassol6_c3, folhas9_c3);
+
+
+// EFEITO ISOLADO: Folhas 5 e 6 (Sem par de Girassol)
+
+const folhasSolitariasC3 = document.querySelectorAll('.folhas5-container3, .folhas6-container3');
+
+folhasSolitariasC3.forEach((folha) => {
+    let tempoFolhaSolitaria;
+
+    function tremerSolitaria() {
+        folha.classList.add('tremendo'); // Usa a sua animação original!
+        
+        clearTimeout(tempoFolhaSolitaria); 
+        
+        tempoFolhaSolitaria = setTimeout(() => {
+            folha.classList.remove('tremendo');
+        }, 600);
+    }
+
+    // Gatilhos
+    folha.addEventListener('click', tremerSolitaria);
+    folha.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 900) tremerSolitaria();
+    });
+});
