@@ -407,6 +407,26 @@ img {
     padding: 20px;
 }
 
+.caixa-texto {
+    position: absolute;
+    color: #333;
+    text-align: center;
+    font-weight: normal;
+    top: 19%;
+    width: 90%;
+}
+
+#texto-digitado {
+    font-size: large;
+}
+
+.texto-container2{
+    position: absolute;
+    top: 32%;    
+    left: 39%;
+    opacity: 0.4;
+
+}
 
 
 .sol{
@@ -598,23 +618,6 @@ img {
     transform: scaleY(-1);
 }
 
-
-
-.caixa-texto h2 {
-    font-family: 'Great Vibes', 'Courier New', Courier, monospace;
-    color: #333;
-    text-align: center;
-    font-weight: normal;
-    
-}
-
-.texto-container2{
-    position: absolute;
-    bottom: 49%;    
-    left: 39%;
-    opacity: 0.5;
-
-}
 
 .efeito-fantasma {
     opacity: 0;
