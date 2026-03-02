@@ -412,7 +412,7 @@ img {
     color: #333;
     text-align: center;
     font-weight: normal;
-    top: 19%;
+    top: 14%;
     width: 80%;
 }
 
@@ -420,14 +420,12 @@ img {
     font-size: large;
     opacity: 0.9;
     font-size: 20px;
-
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .texto-container2{
     position: absolute;
     top: 32%;    
-    left: 39%;
-    opacity: 0.4;
 
 }
 
@@ -601,13 +599,6 @@ img {
     transform: rotate(50deg);
 }
 
-
-
-
-
-
-
-
 .arranjo1-reto-container2{
     position: absolute;
     bottom: 9%;
@@ -620,6 +611,12 @@ img {
     width: 230px;
     transform: scaleY(-1);
 }
+
+
+/* ====== ANIMAÇÕES CONTA. 2. */
+
+
+
 
 
 .efeito-fantasma {
@@ -650,8 +647,48 @@ img {
 
 
 
+/* ==========================================
+   ANIMAÇÃO MINIMALISTA: Brisa Suave (Container 2)
+========================================== */
 
+/* Movimento 1: Sobe e desce quase imperceptivelmente (como uma respiração) */
+@keyframes brisaPlanta1 {
+    0%   { translate: 0px 0px; }
+    50%  { translate: 0px -3px; } /* Flutua 4 pixels para cima */
+    100% { translate: 0px 0px; }
+}
 
+/* Movimento 2: Vai um pouquinho na diagonal bem devagar */
+@keyframes brisaPlanta2 {
+    0%   { translate: 0px 0px; }
+    50%  { translate: -3px -2px; } /* Flutua sutilmente para o lado */
+    100% { translate: 0px 0px; }
+}
+
+/* Aplicando o Movimento 1 (Metade das plantas) */
+/* Duração de 4 segundos: Bem lento e calmo */
+.girassol1-container2, .girassol3-container2, .girassol5-container2, .girassol7-container2,
+.folhas2-container2, .folhas4-container2 {
+    animation: brisaPlanta1 4s ease-in-out infinite;
+}
+
+/* Aplicando o Movimento 2 (A outra metade das plantas) */
+/* Duração de 5 segundos: Cria um desencontro natural com as outras */
+.girassol2-container2, .girassol4-container2, .girassol6-container2,
+.folhas1-container2, .folhas3-container2, .folhas5-container2 {
+    animation: brisaPlanta2 5s ease-in-out infinite;
+}
+
+/* BÔNUS: As abelhinhas merecem flutuar também! */
+@keyframes vooAbelha {
+    0%   { translate: 0px 0px; }
+    50%  { translate: 0px -7px; } 
+    100% { translate: 0px 0px; }
+}
+
+.abelha, .abelha2 {
+    animation: vooAbelha 3s ease-in-out infinite;
+}
 
 
 
@@ -881,10 +918,11 @@ img {
 
 .sol-container3{        /* esquerda *** */
     position: absolute;
-    bottom: 16%;
+    bottom: 570px;
     left: -20px;
     transform:scaleX(1) rotate(2deg);
     width: 180px;
+    z-index: 3;
 
 }
 .folhas11-container3{               /* esquerda *** */

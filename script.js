@@ -233,3 +233,44 @@ const observador = new IntersectionObserver((entradas) => {
 
 const secao = document.getElementById("secao-2");
 if (secao) observador.observe(secao);
+
+
+
+
+
+
+
+// ==========================================
+// SCROLL MÁGICO: Plantas do Container 2
+// ==========================================
+
+// Criamos o "Vigia" que olha a tela
+const observadorDePlantas = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            // Se entrou na tela: Adiciona a classe (Surge e Treme)
+            entrada.target.classList.add('surgiu-na-tela');
+        } else {
+            // Se saiu da tela: Remove a classe (Retrai/Some para o próximo scroll)
+            entrada.target.classList.remove('surgiu-na-tela');
+        }
+    });
+}, {
+    threshold: 0.1 // Dispara a animação quando pelo menos 10% da planta aparecer
+});
+
+// Selecionamos toda a tropa de enfeites do Container 2
+const enfeitesContainer2 = document.querySelectorAll(`
+    .girassol1-container2, .girassol2-container2, .girassol3-container2,
+    .girassol4-container2, .girassol5-container2, .girassol6-container2, .girassol7-container2,
+    .folhas1-container2, .folhas2-container2, .folhas3-container2,
+    .folhas4-container2, .folhas5-container2
+`);
+
+// Mandamos o vigia ficar de olho em cada uma delas
+enfeitesContainer2.forEach((enfeite) => {
+    observadorDePlantas.observe(enfeite);
+});
+
+
+
