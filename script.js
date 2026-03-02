@@ -354,3 +354,78 @@ folhasSolitariasC3.forEach((folha) => {
         if (window.innerWidth >= 900) tremerSolitaria();
     });
 });
+
+
+
+
+
+
+
+
+/* =========================================
+======================================           CONTAINER 4 - SENHA
+========================================= */
+
+
+// ==========================================================
+// SISTEMA DE SENHA (MÁSCARA DE DATA + SHA-256)
+// ==========================================================
+
+const inputSenha = document.getElementById('input-senha');
+const btnSenha = document.getElementById('btn-senha');
+const erroSenha = document.getElementById('erro-senha');
+const secaoCarta = document.getElementById('secao-carta');
+
+// 1. MÁSCARA INTELIGENTE: Coloca as barras (/) automaticamente
+if (inputSenha) {
+    inputSenha.addEventListener('input', function(e) {
+        let valor = e.target.value.replace(/\D/g, ''); // Arranca tudo que não for número
+        
+        // Coloca a primeira barra depois do dia
+        if (valor.length > 2) valor = valor.slice(0, 2) + '/' + valor.slice(2);
+        
+        // Coloca a segunda barra depois do mês
+        if (valor.length > 5) valor = valor.slice(0, 5) + '/' + valor.slice(5);
+        
+        e.target.value = valor; // Devolve pro campo formatado bonitinho
+    });
+}
+
+// 2. FUNÇÃO DE VALIDAÇÃO
+async function validar() {
+    const senhaDigitada = inputSenha.value;
+
+    // Verifica se ela digitou a data inteira (10 caracteres contando as barras)
+    if (senhaDigitada.length !== 10) {
+        erroSenha.textContent = "Por favor, digite a data completa (DD/MM/AAAA).";
+        erroSenha.style.display = 'block';
+        return;
+    }
+
+    // Transforma a data (ex: 11/10/2025) em um Hash SHA-256
+    const msgBuffer = new TextEncoder().encode(senhaDigitada);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashGerado = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+    // DICA: Digite a data no site, olhe o Console (F12) e copie o Hash novo!
+    console.log("O Hash da data " + senhaDigitada + " é:", hashGerado);
+
+    // COLE O HASH NOVO AQUI DENTRO DAS ASPAS:
+    const hashCorreto = "1c575020c7b336b630e3ed2c6f7b042b8ffacb774765216674103b777bec313e"; 
+
+    if (hashGerado === hashCorreto) {
+        // ACERTOU!
+        erroSenha.style.display = 'none'; 
+        secaoCarta.style.display = 'flex'; 
+        secaoCarta.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // ERROU!
+        erroSenha.textContent = "Data incorreta. Tente novamente!";
+        erroSenha.style.display = 'block'; 
+    }
+}
+
+if (btnSenha) {
+    btnSenha.addEventListener('click', validar);
+}

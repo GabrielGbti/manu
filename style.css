@@ -732,10 +732,10 @@ img {
     margin-bottom: -20px; /* Dá uma aproximada do título na primeira foto */
 }
 
-/* ==== ESTRUTURA DAS AMIGAS (Agrupadas!) ======== */
-#marcela, #Estela, #Lele, #Clara, #Tabata {
+/* ==== ESTRUTURA DAS AMIGAS ======== */
+#marcela, #Estela, #Lele, #Clara, #Tabata, #Isa {
     display: flex;
-    flex-direction: column; /* Foto em cima, texto embaixo no celular */
+    flex-direction: column; 
     align-items: center;
     width: 100%;
     gap: 25px;
@@ -743,7 +743,7 @@ img {
 }
 
 /* ==== FOTOS ======== */
-.amiga-marcela, .amiga-estela, .amiga-lele, .amiga-clara, .amiga-tabata {
+.amiga-marcela, .amiga-estela, .amiga-lele, .amiga-clara, .amiga-tabata, .amiga-isa {
     position: relative; 
     width: 85%; 
     max-width: 320px; 
@@ -751,7 +751,7 @@ img {
 }
 
 /* ==== TEXTOS ======== */
-.texto-marcela, .texto-estela, .texto-lele, .texto-clara, .texto-tabata {
+.texto-marcela, .texto-estela, .texto-lele, .texto-clara, .texto-tabata, .texto-isa {
     position: relative; 
     width: 90%; 
     font-size: 1rem;
@@ -760,8 +760,6 @@ img {
     text-align: center;
     font-family: 'Georgia', serif;
 }
-
-
 
 
 
@@ -826,14 +824,14 @@ img {
     position: absolute;
     width: 120px;
     left: 0;
-    top: 22%;
+    top: 19%;
     transform: scaleX(-1) rotate(10deg);
 }
 .folhas6-container3{            /* esquerda *** */
     position: absolute;
     width: 120px;
     left: -30px;
-    top: 28%;
+    top: 25%;
     transform: scaleX(1) rotate(13deg);
 }
 
@@ -845,13 +843,13 @@ img {
 .folhas7-container3{        /* MEIO *** */
     position: absolute;
     width: 70px;
-    top: 42%;
+    top: 36%;
     transform: rotate(20deg);
 }
 .arranjo1-reto-container3{      /* esquerda *** */
     position: absolute;
     left: -40%;
-    top: 50%;
+    top: 43%;
     transform: rotate(90deg);
 
 }
@@ -859,13 +857,13 @@ img {
     position: absolute;
     width: 20%;
     left: 0;
-    top: 40%;
+    top: 35%;
     transform:scaleX(-1) rotate(140deg);
 }
 .folhas8-container3{        /* direita *** */
     position: absolute;
     width: 75px;
-    top: 50%;
+    top: 44%;
     right: 0;
     transform:scaleX(-1) rotate(30deg);
 }
@@ -873,14 +871,14 @@ img {
 .girassol2-container3{          /* meio *** */
     position: absolute;
     width: 65px;
-    right: 40%;
-    top: 42%;
+    right: 36%;
+    top: 36%;
 }
 .girassol3-container3{          /* meio *** */
     position: absolute;
     width: 90px;
     right: 60%;
-    top: 43%;
+    top: 37%;
 }
 
 
@@ -890,14 +888,14 @@ img {
 .folhas9-container3{            /* direita *** */
     position: absolute;
     width: 135px;
-    top: 60%;
+    top: 52%;
     right: 0;
     transform:scaleX(-1) rotate(140deg);
 
 }
 .folhas10-container3{           /* MEIO *** */
     position: absolute;
-    bottom: 24%;
+    bottom: 34%;
     width: 90px;
     transform:scaleX(-1) rotate(120deg);
 
@@ -906,13 +904,13 @@ img {
 .girassol4-container3{              /* direita *** */
     position: absolute;
     width: 93px;
-    bottom: 30%;
+    bottom: 39%;
     left: 1%;
 }
 .girassol5-container3{          /* direita *** */
     position: absolute;
     width: 60px;
-    bottom: 25%;
+    bottom: 35%;
     left: 21%;
 
 }
@@ -923,7 +921,7 @@ img {
 
 .sol-container3{        /* esquerda *** */
     position: absolute;
-    bottom: 570px;
+    bottom: 28%;
     left: -20px;
     transform:scaleX(1) rotate(2deg);
     width: 180px;
@@ -932,22 +930,22 @@ img {
 }
 .folhas11-container3{               /* esquerda *** */
     position: absolute;
-    bottom: 8%;
-    width: 80px;
+    bottom: 21%;
+    width: 100px;
     left: 10px;
     transform:scaleX(-1) rotate(20deg);
 
 }
 .folhas12-container3{               /* direita *** */
     position: absolute;
-    bottom: 15%;
+    bottom: 26%;
     width: 90px;
     right: 0;
-    transform:scaleX(1) rotate(-70deg);
+    transform:scaleX(1) rotate(-60deg);
 }
 .folhas13-container3{               /* esquerda *** */
     position: absolute;
-    bottom: 8%;
+    bottom: 18%;
     right: 10px;
     width: 100px;
     transform:scaleX(-1) rotate(50deg);
@@ -955,10 +953,41 @@ img {
 
 .girassol6-container3{
     position: absolute;
-    bottom: 18%;
+    bottom: 29%;
     width: 63px;
     right: 110px;
 }
+
+
+
+/* ============================= > ISA < = */
+
+.folhas14-container3{
+    position: absolute;
+    width: 130px;
+    bottom: 5%;
+    left: 0;
+    transform: scaleX(-1) rotate(20deg);
+}
+
+.folhas15-container3{
+    position: absolute;
+    width: 120px;
+    bottom: 10px;
+    right: 0;
+    transform: scaleX(-1) rotate(40deg);
+}
+
+.girassol7-container3{
+    position: absolute;
+    width: 110px;
+    bottom: 11%;
+    left: 0;
+    z-index: 5;
+}
+
+
+
 
 
 /* =========== animações terceiro contai. */
@@ -974,6 +1003,173 @@ img {
 
 
 
+
+
+/* =========================================
+======================================CONTAINER 4 - SENHA
+========================================= */
+.secao-senha {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.texto-container4{
+    position: absolute;
+    top: 15%;
+    width: 60%;
+    text-align: center;
+
+}
+
+.manu-pastel-container4{
+    position: absolute;
+    width: 340px;
+    top: 25%;
+    margin-right: 25px;
+}
+
+.data-botao{
+    position: absolute;
+    top: 72%;
+}
+
+.cadeado{
+    width: 80px;
+    padding-top: 600px;
+}
+
+
+
+
+.folhas1-container4{
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 12px;
+    top: -9%;
+    rotate: 90deg;
+}
+
+.folhas2-container4{
+    position: absolute;
+    width: 100px;
+    top: -10%;
+    right: 12px;
+    rotate: -90deg;
+}
+
+.girassol1-container4{
+    position: absolute;
+    width: 100px;
+    top: -1%;
+    z-index: 2;
+}
+
+
+.borboleta1-container4{
+    position: absolute;
+    width: 31px;
+    bottom: 18%;
+    right: 10%;
+    rotate: -129deg;
+}
+
+.borboleta2-container4{
+    position: absolute;
+    width: 40px;
+    rotate: 70deg;
+    bottom: 2%;
+    left: 12%;
+}
+
+
+
+/* ======================================
+===========================================CONTAINER 5 - CARTA
+========================================= */
+.secao-carta {
+    min-height: 100vh;
+    width: 100%;
+    display: flex; /* O JS vai controlar se isso aparece ou não */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+=============================================CONTAINER 6 - FIM
+========================================= */
+.secao-fim {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.secao-fim h1{
+    padding-top: 40%;
+    font-size: 40px;
+}
+
+.texto-container5{
+    padding-top: 70%;
+    width: 60%;
+    text-align: center;
+
+}
+
+
+.esquerda-alto{
+    position: absolute;
+    left: -4%;
+    bottom: -2%;
+    width: 103px;
+
+}
+
+.esquerda-baixo{
+    position: absolute;
+    left: 20%;
+    width: 80px;
+    bottom: -1%;
+}
+
+.meio{
+    position: absolute;
+    width: 100px;
+    bottom: -2%;
+}
+
+.direita-baixo{
+    position: absolute;
+    right: 16%;
+    width: 100px;
+    bottom: -1%;
+
+}
+
+.direita-alto{
+    position: absolute;
+    right: -5%;
+    width: 110px;
+    bottom: -11px;
+}
 
 
 
@@ -1065,7 +1261,7 @@ img {
 
     .Livros {
         top: 50%;
-        left: 15%;
+        left: 16%;
         bottom: auto;
     }
 
@@ -1158,7 +1354,7 @@ img {
     }
     
     .Girassol2 { 
-        top: 40%; 
+        top: 30%; 
         left: 0; 
         width: 210px; 
     }
@@ -1465,8 +1661,8 @@ img {
         margin: 0 auto; 
     }
 
-    /* Estela e Clara: Texto na Esquerda, Foto Direita */
-    #Estela, #Clara {
+    /* Estela, Clara e Isa: Texto na Esquerda, Foto Direita */
+    #Estela, #Clara, #Isa {
         flex-direction: row-reverse; 
         justify-content: space-between;
         max-width: 900px;
@@ -1474,15 +1670,14 @@ img {
     }
 
     /* Ajuste de tamanho para o PC */
-    .amiga-marcela, .amiga-estela, .amiga-lele, .amiga-clara, .amiga-tabata {
+    .amiga-marcela, .amiga-estela, .amiga-lele, .amiga-clara, .amiga-tabata, .amiga-isa {
         width: 40%;
     }
 
-    .texto-marcela, .texto-estela, .texto-lele, .texto-clara, .texto-tabata {
+    .texto-marcela, .texto-estela, .texto-lele, .texto-clara, .texto-tabata, .texto-isa {
         width: 50%;
         text-align: center; 
     }
-
 
 
     /* =========>>>>     ENFEITES DO TERCEIRO CONTAINER ===== */
@@ -1698,7 +1893,7 @@ img {
     }
     .girassol6-container3{              /* direita *** */
         position: absolute;
-        bottom: 7%;
+        bottom: 9%;
         width: 163px;
         right: 110px;
 
@@ -1715,6 +1910,45 @@ img {
         pointer-events: auto !important;
         cursor: pointer !important;
     }
+
+
+
+    /* ============================= > ISA < = */
+
+
+    .folhas14-container3{
+        width: 160px;
+        bottom: -8%;
+        left: 0;
+        transform: scaleX(1) rotate(50deg);
+    }
+
+    .folhas15-container3{
+        display: none;
+    }
+
+    .girassol7-container3{
+        width: 150px;
+        bottom: 1%;
+        left: 9%;
+        z-index: 5;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
