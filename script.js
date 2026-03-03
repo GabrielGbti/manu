@@ -59,15 +59,51 @@ btnEntrar.onclick = function() {
 
 
 // ==========================================
-// PLAYER DE ÁUDIO
+// PLAYER DE ÁUDIO (MÚSICA 1 E 2)
 // ==========================================
-var musica = document.getElementById("musica");
-var btnPlay = document.getElementById("btn-play");
-var textoDicaAudio = document.getElementById("texto-dica"); // O texto embaixo do play
 
+// Elementos da Música 1
+const musica = document.getElementById("musica");
+const btnPlay = document.getElementById("btn-play");
+const textoDicaAudio = document.getElementById("texto-dica");
+
+// Elementos da Música 2
+const musica2 = document.getElementById("musica2");
+const btnPlay2 = document.getElementById("btn-play-2"); // Agora no lugar certo!
+const textoDica2 = document.getElementById("texto-dica-2");
+
+// Função inteligente para pausar TUDO e voltar os textos/imagens pro padrão
+function pausarTudo() {
+    // 1. Pausa as duas músicas
+    if (musica) musica.pause();
+    if (musica2) musica2.pause();
+    
+    // 2. Reseta a imagem dos dois botões de play
+    if (btnPlay) btnPlay.src = "img/play.png";
+    if (btnPlay2) btnPlay2.src = "img/play.png";
+    
+    // 3. Reseta o texto da Música 1
+    if (textoDicaAudio) {
+        textoDicaAudio.innerText = "clique no play, sorriso!";
+        textoDicaAudio.classList.remove("fonte-romantica");
+        textoDicaAudio.classList.add("fonte-normal");
+    }
+
+    // 4. Reseta o texto da Música 2
+    if (textoDica2) {
+        textoDica2.innerText = "aperte no play para conseguir ler a carta";
+        textoDica2.classList.remove("fonte-romantica");
+        textoDica2.classList.add("fonte-normal");
+    }
+}
+
+// ==========================================
+// AÇÃO DA MÚSICA 1
+// ==========================================
 if (btnPlay) {
     btnPlay.onclick = function() {
         if (musica.paused) {
+            pausarTudo(); // Cala a música 2 antes de tocar a 1
             musica.play();
             btnPlay.src = "img/play-go.png";
             if (textoDicaAudio) {
@@ -76,18 +112,38 @@ if (btnPlay) {
                 textoDicaAudio.classList.add("fonte-romantica");
             }
         } else {
-            musica.pause();
-            btnPlay.src = "img/play.png";
-            if (textoDicaAudio) {
-                textoDicaAudio.innerText = "clique no play, sorriso!";
-                textoDicaAudio.classList.remove("fonte-romantica");
-                textoDicaAudio.classList.add("fonte-normal");
-            }
+            pausarTudo(); // Se já estava tocando, só pausa e reseta
         }
     }
 }
 
+// ==========================================
+// AÇÃO DA MÚSICA 2 (Com a carta aparecendo)
+// ==========================================
+if (btnPlay2) {
+    btnPlay2.onclick = function() {
+        if (musica2.paused) {
+            pausarTudo(); // Cala a música 1 antes de tocar a 2
+            musica2.play();
+            btnPlay2.src = "img/play-go.png"; 
+            
+            if (textoDica2) {
+                textoDica2.innerText = "lendo a carta com a nossa música 💛🔊";
+                textoDica2.classList.remove("fonte-normal");
+                textoDica2.classList.add("fonte-romantica");
+            }
 
+            // === A MÁGICA DA CARTA ACONTECE AQUI ===
+            const cartaSecreta = document.getElementById("texto-carta");
+            if (cartaSecreta) {
+                cartaSecreta.style.display = "block"; // Faz o texto aparecer!
+            }
+
+        } else {
+            pausarTudo(); // Pausa a música, mas repare que NÃO escondemos a carta de novo!
+        }
+    }
+}
 
 
 

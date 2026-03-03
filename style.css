@@ -942,7 +942,7 @@ img {
     bottom: 32%;
     width: 90px;
     right: 0;
-    transform:scaleX(1) rotate(-60deg);
+    transform:scaleX(1) rotate(-76deg);
 }
 .folhas13-container3{               /* esquerda *** */
     position: absolute;
@@ -954,7 +954,7 @@ img {
 
 .girassol6-container3{
     position: absolute;
-    bottom: 35%;
+    bottom: 34%;
     width: 63px;
     right: 110px;
     rotate: -80deg;
@@ -1094,25 +1094,94 @@ img {
 .secao-carta {
     min-height: 100vh;
     width: 100%;
-    display: flex; /* O JS vai controlar se isso aparece ou não */
+    display: flex; /* O JS vai controlar  */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
+.manu-alianca{
+    width: 300px;
+}
+
+.play-container5{
+    width: 49%;
+    padding-top: 5%;
+}
+
+.texto-play-container5 {
+    padding-top: 5%;
+    font-size: 0.7rem;
+}
+
+.papel-carta{
+    width: 100%;
+    margin-right: 43px;
+    padding-top: 20%;
+    opacity: 0.7;
+
+}
+
+.carta-gabriel{
+    width: 69%;
+    bottom: 6%;
+    z-index: 1;
+}
+
+.carta-dentro{
+    z-index: 10;
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    color: #4a2c2a; /* marrom suave */
+    text-align: center;
+    padding: 20px;
+    opacity: 2.7;
+    bottom: 3%;
+    margin-right: 40px;
+
+}
 
 
+/* --- Animação para a Carta --- */
 
+/* Classe que vamos adicionar pelo JavaScript */
+.carta-aparecendo {
+    animation: surgirTexto 4s ease-out forwards; /* 4s é a velocidade do efeito */
+}
 
+@keyframes surgirTexto {
+    0% {
+        opacity: 0;              /* Começa invisível */
+        max-height: 0;            /* Sem altura nenhuma */
+        transform: translateY(-20px); /* Começa um pouquinho pra cima */
+        filter: blur(5px);       /* Começa embaçado */
+    }
+    10% {
+        opacity: 0;              /* Continua invisível um tempinho (para a música carregar) */
+        max-height: 0;
+    }
+    100% {
+        opacity: 1;              /* Totalmente visível */
+        max-height: 1000px;      /* Altura máxima (ajuste se a carta for muito grande) */
+        transform: translateY(0); /* Volta pra posição normal */
+        filter: blur(0);         /* Tira o embaçado */
+    }
+}
 
+/* Ajuste sutil na classe que você já tem para ajudar na animação */
+.carta-gabriel {
+    overflow: hidden; /* Necessário para o efeito de "esticar" funcionar */
+}
 
 
 /* =========================================
 =============================================CONTAINER 6 - FIM
 ========================================= */
 .secao-fim {
-    min-height: 100vh;
+    min-height: 190vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1121,12 +1190,22 @@ img {
 }
 
 .secao-fim h1{
-    padding-top: 40%;
+    padding-top: 300px;
     font-size: 40px;
 }
 
+
+
+.gif2{
+    position: absolute;
+    top: 38%;
+}
+
+
+
+
 .texto-container5{
-    padding-top: 70%;
+    padding-top: 153%;
     width: 60%;
     text-align: center;
 
