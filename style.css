@@ -1108,80 +1108,115 @@ img {
 .play-container5{
     width: 49%;
     padding-top: 5%;
+    z-index: 10;
 }
 
 .texto-play-container5 {
     padding-top: 5%;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
-.papel-carta{
-    width: 100%;
-    margin-right: 43px;
-    padding-top: 20%;
-    opacity: 0.7;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Importando a fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Estilo do fundo e da "folha" da carta */
+.carta-gabriel {
+    max-width: 650px; /* Largura ideal para não ficar esticadão na tela */
+    margin: 40px auto; /* Centraliza a carta na tela com um espaço em cima e embaixo */
+    background-color: #fdfaf6; /* Cor de papel antigo/creme bem suave */
+    padding: 50px 40px; /* Dá bastante respiro dentro da carta */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    border: 1px solid #e8decb; /* Uma bordinha sutil para delimitar o papel */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 
+    inset 0 0 20px rgba(230, 218, 206, 0.3); /* Sombra 3D linda e borda interna */
+    transition: opacity 1.5s ease; /* Faz a carta aparecer bem suavemente quando o seu JS mudar a opacidade */
 }
 
-.carta-gabriel{
-    width: 69%;
-    bottom: 6%;
-    z-index: 1;
-}
-
-.carta-dentro{
-    z-index: 10;
-    position: absolute;
+/* Estilo do texto (o seu <h6>) */
+.carta-dentro {
     font-family: 'Playfair Display', serif;
-    font-size: 1.0rem;
-    letter-spacing: 1px;
-    color: #4a2c2a; /* marrom suave */
+    font-size: 1.15rem; /* Tamanho agradável para leitura */
+    font-weight: 400; /* Tira o "peso" do h6, deixando a letra fina e elegante */
+    line-height: 1.8; /* Espaçamento bem generoso entre as linhas */
+    letter-spacing: 0.5px;
+    color: #4a2c2a; /* Aquele marrom suave e chique que você escolheu */
     text-align: center;
-    padding: 20px;
-    opacity: 2.7;
-    bottom: 3%;
-    margin-right: 40px;
-
+    margin: 0;
 }
+
+/* Estilo para a foto dentro da carta */
+.foto-carta {
+    display: block; /* Permite centralizar a imagem */
+    margin: 40px auto 0; /* Espaço de 40px em cima, centraliza nas laterais, sem espaço extra embaixo */
+    max-width: 80%; /* A foto vai ocupar até 80% da largura da carta, deixando uma margem bonita */
+    height: auto; /* Mantém a proporção da foto para não achatar */
+    border-radius: 8px; /* Deixa as pontinhas da foto levemente arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Uma sombra suave para a foto parecer impressa no papel */
+    border: 3px solid #fff; /* Uma bordinha branca estilo polaroid fina */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* --- Animação para a Carta --- */
 
-/* Classe que vamos adicionar pelo JavaScript */
 .carta-aparecendo {
-    animation: surgirTexto 4s ease-out forwards; /* 4s é a velocidade do efeito */
+    /* O 'forwards' faz a carta ficar visível no final e não sumir de novo */
+    animation: surgirTexto 4s ease-out forwards; 
 }
 
 @keyframes surgirTexto {
     0% {
-        opacity: 0;              /* Começa invisível */
-        max-height: 0;            /* Sem altura nenhuma */
-        transform: translateY(-20px); /* Começa um pouquinho pra cima */
-        filter: blur(5px);       /* Começa embaçado */
-    }
-    10% {
-        opacity: 0;              /* Continua invisível um tempinho (para a música carregar) */
-        max-height: 0;
+        opacity: 0;
+        transform: translateY(-15px);
     }
     100% {
-        opacity: 1;              /* Totalmente visível */
-        max-height: 1000px;      /* Altura máxima (ajuste se a carta for muito grande) */
-        transform: translateY(0); /* Volta pra posição normal */
-        filter: blur(0);         /* Tira o embaçado */
+        opacity: 1; /* Força o texto a ficar 100% visível */
+        transform: translateY(0);
     }
 }
 
-/* Ajuste sutil na classe que você já tem para ajudar na animação */
-.carta-gabriel {
-    overflow: hidden; /* Necessário para o efeito de "esticar" funcionar */
-}
+
+
 
 
 /* =========================================
 =============================================CONTAINER 6 - FIM
 ========================================= */
 .secao-fim {
-    min-height: 190vh;
+    min-height: 250vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1198,16 +1233,21 @@ img {
 
 .gif2{
     position: absolute;
-    top: 38%;
+    top: 44%;
+    width: 70%;
 }
 
 
 
 
 .texto-container5{
-    padding-top: 153%;
+    position: absolute;
     width: 60%;
+    top: 57%;
     text-align: center;
+    z-index: 3;
+    color: rgb(26, 25, 25); /* se estiver sobre imagem */
+    text-shadow: 3px 4px 9px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -1249,6 +1289,63 @@ img {
 }
 
 
+
+
+
+
+
+
+.borboleta1-container6{
+    position: absolute;
+    right: 20%;
+    width: 8%;
+    top: 2%;
+    rotate: -160deg;
+}
+
+.borboleta2-container6{
+    position: absolute;
+    right: 13%;
+    width: 13%;
+    top: 22%;
+    rotate: 110deg;
+}
+
+.borboleta3-container6{
+    position: absolute;
+    right: 2%;
+    width: 16%;
+    top: 65%;
+    rotate: -40deg;
+}
+
+
+
+
+.borboleta4-container6{
+    position: absolute;
+    left: 5%;
+    width: 10%;
+    top: 8%;
+    rotate: 140deg;
+}
+
+.borboleta5-container6{
+    position: absolute;
+    left: 0;
+    width: 15%;
+    top: 34%;
+    rotate: 157deg;
+}
+
+.borboleta6-container6{
+    position: absolute;
+    left: 10%;
+    width: 18%;
+    top: 80%;
+    rotate: 107deg;
+
+}
 
 /* =========================================
    4. MEDIA QUERIES (Adaptando pro Computador)

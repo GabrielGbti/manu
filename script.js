@@ -69,7 +69,7 @@ const textoDicaAudio = document.getElementById("texto-dica");
 
 // Elementos da Música 2
 const musica2 = document.getElementById("musica2");
-const btnPlay2 = document.getElementById("btn-play-2"); // Agora no lugar certo!
+const btnPlay2 = document.getElementById("btn-play-2");
 const textoDica2 = document.getElementById("texto-dica-2");
 
 // Função inteligente para pausar TUDO e voltar os textos/imagens pro padrão
@@ -118,7 +118,7 @@ if (btnPlay) {
 }
 
 // ==========================================
-// AÇÃO DA MÚSICA 2 (Com a carta aparecendo)
+// AÇÃO DA MÚSICA 2 (Com efeito mágico na carta)
 // ==========================================
 if (btnPlay2) {
     btnPlay2.onclick = function() {
@@ -128,24 +128,23 @@ if (btnPlay2) {
             btnPlay2.src = "img/play-go.png"; 
             
             if (textoDica2) {
-                textoDica2.innerText = "lendo a carta com a nossa música 💛🔊";
+                textoDica2.innerText = "agora sim meu amorrr 💛🔊";
                 textoDica2.classList.remove("fonte-normal");
                 textoDica2.classList.add("fonte-romantica");
             }
 
-            // === A MÁGICA DA CARTA ACONTECE AQUI ===
             const cartaSecreta = document.getElementById("texto-carta");
             if (cartaSecreta) {
-                cartaSecreta.style.display = "block"; // Faz o texto aparecer!
+                // Removemos o opacity: 0 que tava travando ela
+                cartaSecreta.style.opacity = ""; 
+                // Adicionamos a animação pra ela surgir linda
+                cartaSecreta.classList.add("carta-aparecendo"); 
             }
-
         } else {
-            pausarTudo(); // Pausa a música, mas repare que NÃO escondemos a carta de novo!
+            pausarTudo(); // Pausa a música, mas a carta continua aparecendo lindamente!
         }
     }
 }
-
-
 
 
 
