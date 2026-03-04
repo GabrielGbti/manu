@@ -1114,6 +1114,7 @@ img {
 }
 
 .texto-play-container5 {
+    white-space: pre-line;
     padding-top: 5%;
     font-size: 0.9rem;
 }

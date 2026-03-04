@@ -128,7 +128,7 @@ if (btnPlay2) {
             btnPlay2.src = "img/play-go.png"; 
             
             if (textoDica2) {
-                textoDica2.innerText = "agora sim meu amorrr 💛🔊";
+                textoDica2.innerText = "agora sim meu amorrr 💛🔊\n\n'Seu Astral - Jorge e Matheus'";
                 textoDica2.classList.remove("fonte-normal");
                 textoDica2.classList.add("fonte-romantica");
             }
@@ -464,7 +464,7 @@ async function validar() {
     const hashGerado = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
     // DICA: Digite a data no site, olhe o Console (F12) e copie o Hash novo!
-    console.log("O Hash da data " + senhaDigitada + " é:", hashGerado);
+    // console.log("O Hash da data " + senhaDigitada + " é:", hashGerado);
 
     // COLE O HASH NOVO AQUI DENTRO DAS ASPAS:
     const hashCorreto = "1c575020c7b336b630e3ed2c6f7b042b8ffacb774765216674103b777bec313e"; 
