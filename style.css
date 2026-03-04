@@ -1222,6 +1222,7 @@ img {
     flex-direction: column;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .secao-fim h1{
@@ -1255,7 +1256,7 @@ img {
 .esquerda-alto{
     position: absolute;
     left: -4%;
-    bottom: -2%;
+    bottom: -9px;
     width: 103px;
 
 }
@@ -1264,20 +1265,20 @@ img {
     position: absolute;
     left: 20%;
     width: 80px;
-    bottom: -2%;
+    bottom: -3px;
 }
 
 .meio{
     position: absolute;
     width: 100px;
-    bottom: -2%;
+    bottom: -5px;
 }
 
 .direita-baixo{
     position: absolute;
     right: 16%;
     width: 100px;
-    bottom: -2%;
+    bottom: -1px;
 
 }
 
@@ -1285,7 +1286,7 @@ img {
     position: absolute;
     right: -5%;
     width: 110px;
-    bottom: -2%;
+    bottom: -7px;
 }
 
 
@@ -1316,7 +1317,7 @@ img {
     right: 2%;
     width: 16%;
     top: 65%;
-    rotate: -40deg;
+    rotate: -140deg;
 }
 
 
@@ -2074,7 +2075,7 @@ img {
     }
 
     /* ==========================================
-       PERMISSÃO DE MOUSE E CAMADAS: Pares do Container 3
+    PERMISSÃO DE MOUSE E CAMADAS: Pares do Container 3
     ========================================== */
     
 
@@ -2110,19 +2111,138 @@ img {
 
 
 
+    /* ================= ESTILO DO QUARTO CONTAINER ================= */ 
+
+    .girassol1-container4{
+        right: 8%;
+        rotate: 10deg;
+    }
+
+
+
+    /* ================= ESTILO DO QUINTO CONTAINER ================= */ 
+
+    .manu-alianca{
+        width: 25%;
+    }
+
+    .play-container5{
+        width: 17%;
+    }
+
+    /* ================= ESTILO DO SEXTO CONTAINER ================= */ 
+
+    .secao-fim{
+        min-height: 150vh;
+        overflow: hidden;  /* ESSENCIAL */
+
+    }
+
+    .secao-fim h1{
+        font-size: 5.4rem;
+    }
+
+
+    .gif2{
+        display: none;
+    }
+
+    .texto-container5{
+        top: 38%;
+        font-size: 1.3rem;
+    }
 
 
 
 
 
 
+    .borboleta1-container6{
+        position: absolute;
+        right: 20%;
+        width: 2%;
+        top: 2%;
+        rotate: 160deg;
+    }
+
+    .borboleta2-container6{
+        position: absolute;
+        right: 27%;
+        width: 4%;
+        top: 15%;
+        rotate: -30deg;
+    }
+
+    .borboleta3-container6{
+        position: absolute;
+        right: 25%;
+        width: 4%;
+        top: 52%;
+        rotate: 0deg;
+    }
+
+
+
+
+    .borboleta4-container6{
+        position: absolute;
+        left: 24%;
+        width: 3%;
+        top: 2%;
+        rotate: 140deg;
+    }
+
+    .borboleta5-container6{
+        position: absolute;
+        left: 5%;
+        width: 5%;
+        top: 15%;
+        rotate: 157deg;
+    }
+
+    .borboleta6-container6{
+        position: absolute;
+        left: 20%;
+        width: 8%;
+        top: 50%;
+        rotate: 60deg;
+
+    }
 
 
 
 
 
+    .esquerda-alto{
+        left: -4%;
+        bottom: -2%;
+        width: 25%;
+        
+    }
 
+    .esquerda-baixo{
+        overflow: hidden !important;
+        left: 20%;
+        width: 17%;
+        bottom: -1%;
+    }
 
+    .meio{
+        width: 23%;
+        bottom: -2%;
+    }
 
+    .direita-baixo{
+        right: 20%;
+        width: 20%;
+        bottom: 0;
+
+    }
+
+    .direita-alto{
+        right: -5%;
+        width: 28%;
+        bottom: -2%;
+    }
 
 }
