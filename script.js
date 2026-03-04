@@ -107,7 +107,7 @@ if (btnPlay) {
             musica.play();
             btnPlay.src = "img/play-go.png";
             if (textoDicaAudio) {
-                textoDicaAudio.innerText = "agora sim, pode descer 💛🔊";
+                textoDicaAudio.innerText = "agora sim, pode descer 💛🔊\nSorrisos - L7 🎶";
                 textoDicaAudio.classList.remove("fonte-normal");
                 textoDicaAudio.classList.add("fonte-romantica");
             }
@@ -250,7 +250,7 @@ if (girassol2 && folhas2) ativarAnimacao(girassol2, folhas2);
 /* ====================================================
    MÁQUINA DE ESCREVER COM FADE-IN DO TEXTO
    ==================================================== */
-const frase = "Seu astral ilumina todos como o sol, Manuela.\nPor isso te amar é tão fácil. Quer uma prova?";
+const frase = "Seu astral ilumina todos como o sol, Sorriso.\nPor isso te amar é tão fácil. Quer uma prova?";
 const elementoTexto = document.getElementById("texto-digitado");
 
 // Puxando exatamente a CLASSE do seu h6
