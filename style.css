@@ -735,7 +735,7 @@ img {
 }
 
 /* ==== ESTRUTURA DAS AMIGAS ======== */
-#marcela, #Estela, #Lele, #Clara, #Tabata, #Isa {
+#marcela, #Estela, #Lele, #Clara, #Tabata2, #Tabata, #Isa {
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -763,7 +763,9 @@ img {
     font-family: 'Georgia', serif;
 }
 
-
+#Tabata2{
+    display: none;
+}
 
 
 
@@ -793,7 +795,7 @@ img {
     position: absolute;
     width: 100px;
     left: -29px;
-    top: 10%;
+    top: 9%;
     transform: scaleX(-1) rotate(-20deg);
 
 }
@@ -819,22 +821,22 @@ img {
     position: absolute;
     width: 100px;
     right: 0;
-    top: 22%;
+    top: 21%;
     transform: scaleX(-1) rotate(40deg);
 }
 .folhas5-container3{            /* esquerda *** */
     position: absolute;
     width: 120px;
     left: 0;
-    top: 18%;
+    top: 17%;
     transform: scaleX(-1) rotate(10deg);
 }
 .folhas6-container3{            /* esquerda *** */
     position: absolute;
     width: 120px;
     left: -30px;
-    top: 23%;
-    transform: scaleX(1) rotate(13deg);
+    top: 21%;
+    transform: scaleX(1) rotate(18deg);
 }
 
 
@@ -845,7 +847,7 @@ img {
 .folhas7-container3{        /* MEIO *** */
     position: absolute;
     width: 70px;
-    top: 34%;
+    top: 32%;
     transform: rotate(20deg);
 }
 .arranjo1-reto-container3{      /* esquerda *** */
@@ -859,12 +861,12 @@ img {
     position: absolute;
     width: 15%;
     left: 0;
-    top: 33%;
+    top: 32%;
     transform:scaleX(-1) rotate(140deg);
 }
 .folhas8-container3{        /* direita *** */
     position: absolute;
-    width: 75px;
+    width: 95px;
     top: 39%;
     right: 0;
     transform:scaleX(-1) rotate(30deg);
@@ -872,16 +874,16 @@ img {
 
 .girassol2-container3{          /* meio *** */
     position: absolute;
-    width: 60px;
+    width: 73px;
     right: 36%;
-    top: 34%;
+    top: 32%;
     rotate: -30deg;
 }
 .girassol3-container3{          /* meio *** */
     position: absolute;
     width: 80px;
     right: 60%;
-    top: 34%;
+    top: 33%;
 }
 
 
@@ -891,14 +893,14 @@ img {
 .folhas9-container3{            /* direita *** */
     position: absolute;
     width: 135px;
-    top: 48%;
+    top: 45%;
     right: 0;
     transform:scaleX(-1) rotate(140deg);
 
 }
 .folhas10-container3{           /* MEIO *** */
     position: absolute;
-    bottom: 39%;
+    bottom: 42%;
     width: 90px;
     transform:scaleX(-1) rotate(120deg);
 
@@ -907,13 +909,13 @@ img {
 .girassol4-container3{              /* direita *** */
     position: absolute;
     width: 93px;
-    bottom: 44%;
+    bottom: 47%;
     left: 1%;
 }
 .girassol5-container3{          /* direita *** */
     position: absolute;
     width: 60px;
-    bottom: 40%;
+    bottom: 43%;
     left: 21%;
 
 }
@@ -924,7 +926,7 @@ img {
 
 .sol-container3{        /* esquerda *** */
     position: absolute;
-    bottom: 34%;
+    bottom: 37%;
     left: -20px;
     transform:scaleX(1) rotate(2deg);
     width: 30%;
@@ -933,30 +935,30 @@ img {
 }
 .folhas11-container3{               /* esquerda *** */
     position: absolute;
-    bottom: 27%;
-    width: 100px;
+    bottom: 30%;
+    width: 110px;
     left: 10px;
-    transform:scaleX(-1) rotate(20deg);
+    transform:scaleX(-1) rotate(30deg);
 
 }
 .folhas12-container3{               /* direita *** */
     position: absolute;
-    bottom: 32%;
+    bottom: 36%;
     width: 90px;
     right: 0;
     transform:scaleX(1) rotate(-76deg);
 }
 .folhas13-container3{               /* esquerda *** */
     position: absolute;
-    bottom: 23%;
+    bottom: 27%;
     right: 10px;
     width: 100px;
-    transform:scaleX(-1) rotate(50deg);
+    transform:scaleX(-1) rotate(60deg);
 }
 
 .girassol6-container3{
     position: absolute;
-    bottom: 34%;
+    bottom: 38%;
     width: 63px;
     right: 110px;
     rotate: -80deg;
@@ -968,10 +970,10 @@ img {
 
 .folhas14-container3{
     position: absolute;
-    width: 130px;
-    bottom: 12%;
+    width: 140px;
+    bottom: 11%;
     left: 10px;
-    transform: scaleX(-1) rotate(20deg);
+    transform: scaleX(-1) rotate(22deg);
 }
 
 .folhas15-container3{
@@ -985,7 +987,7 @@ img {
 .girassol7-container3{
     position: absolute;
     width: 110px;
-    bottom: 18%;
+    bottom: 17%;
     left: 0;
     z-index: 5;
 }
@@ -1051,7 +1053,7 @@ img {
     position: absolute;
     width: 100px;
     top: 0;
-    left: 12px;
+    left: 18px;
     top: -9%;
     rotate: 90deg;
 }
@@ -1060,7 +1062,7 @@ img {
     position: absolute;
     width: 100px;
     top: -10%;
-    right: 12px;
+    right: 15px;
     rotate: -90deg;
 }
 
@@ -1830,9 +1832,17 @@ img {
     }
     
 
+    #Tabata{
+        display: none;
+    }
+
+    #Tabata2{
+        display: flex;
+    }
+
 
     /* Marcela, Lelê e Tabata: Foto na Esquerda, Texto Direita */
-    #marcela, #Lele, #Tabata {
+    #marcela, #Lele, #Tabata2 {
         flex-direction: row; 
         justify-content: space-between;
         max-width: 900px;
