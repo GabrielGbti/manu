@@ -946,7 +946,8 @@ img {
     bottom: 36%;
     width: 90px;
     right: 0;
-    transform:scaleX(1) rotate(-76deg);
+    transform:scaleX(1) 
+    rotate(-76deg);
 }
 .folhas13-container3{               /* esquerda *** */
     position: absolute;
@@ -973,7 +974,8 @@ img {
     width: 140px;
     bottom: 11%;
     left: 10px;
-    transform: scaleX(-1) rotate(22deg);
+    transform: scaleX(-1); /* Separado! */
+    rotate: -22deg;         /* Separado! */
 }
 
 .folhas15-container3{
@@ -981,7 +983,8 @@ img {
     width: 120px;
     bottom: 7%;
     right: 0;
-    transform: scaleX(-1) rotate(40deg);
+    transform: scaleX(-1); /* Separado! */
+    rotate: -40deg;         /* Separado! */
 }
 
 .girassol7-container3{
@@ -998,13 +1001,79 @@ img {
 
 /* =========== animações terceiro contai. */
 
-/* 1. Libera o clique/hover para as Folhas (Fundo) */
-.folhas1-container3, .folhas2-container3, .folhas7-container3, 
-.folhas8-container3, .folhas9-container3, .folhas10-container3, 
-.folhas5-container3, .folhas6-container3 {
+.folhas1-container3, .folhas2-container3, .folhas3-container3, 
+.folhas4-container3, .folhas5-container3, .folhas6-container3, 
+.folhas7-container3, .folhas8-container3, .folhas9-container3, 
+.folhas10-container3, .folhas11-container3, .folhas12-container3, 
+.folhas13-container3, .folhas14-container3, .folhas15-container3 {
     pointer-events: auto !important;
     cursor: pointer !important;
+    z-index: 1;
 }
+
+/* 2. Libera o clique para os Girassóis e garante que fiquem na frente (Camada 2) */
+.girassol1-container3, .girassol2-container3, 
+.girassol3-container3, .girassol6-container3, 
+.girassol7-container3 {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 2 !important; /* Coloca os girassóis na frente das folhas */
+}
+
+.girassol4-container3, .girassol5-container3{
+    z-index: 10;
+}
+
+
+
+
+
+/* ==========================================================
+   CORREÇÃO DE ANIMAÇÃO PARA AS FOLHAS TEIMOSAS
+   ========================================================== */
+
+/* A folha 11 balança em torno dos 30 graus */
+.folhas11-container3.tremendo { animation: tremerF11 0.6s ease-in-out !important; }
+@keyframes tremerF11 {
+    0%, 100% { transform: scaleX(-1) rotate(30deg); }
+    30% { transform: scaleX(-1) rotate(33deg); }
+    70% { transform: scaleX(-1) rotate(27deg); }
+}
+
+/* Folha 12: Base -76deg -> Balança 3 graus (Não tem scaleX negativo) */
+.folhas12-container3.tremendo { animation: tremerF12 0.6s ease-in-out !important; }
+@keyframes tremerF12 {
+    0%, 100% { transform: scaleX(1) rotate(-76deg); }
+    30% { transform: scaleX(1) rotate(-73deg); }
+    70% { transform: scaleX(1) rotate(-79deg); }
+}
+
+/* Folha 13: Base 60deg -> Balança 3 graus */
+.folhas13-container3.tremendo { animation: tremerF13 0.6s ease-in-out !important; }
+@keyframes tremerF13 {
+    0%, 100% { transform: scaleX(-1) rotate(60deg); }
+    30% { transform: scaleX(-1) rotate(63deg); }
+    70% { transform: scaleX(-1) rotate(57deg); }
+}
+
+/* Folha 15: Base 40deg -> Balança 3 graus */
+.folhas15-container3.tremendo { animation: tremerF15 0.6s ease-in-out !important; }
+@keyframes tremerF15 {
+    0%, 100% { rotate: -40deg; }
+    30%      { rotate: -37deg; }
+    70%      { rotate: -43deg; }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1874,7 +1943,7 @@ img {
     /* ============================= > MARCELA < = */
 
     .folhas1-container3{                /* esquerda *** */
-        position: absolute;
+        position: absolute; 
         width: 220px;
         top: 10px;
         left: -30px;
@@ -2117,8 +2186,8 @@ img {
 
     .girassol7-container3{
         width: 150px;
-        bottom: 1%;
-        left: 9%;
+        bottom: 2%;
+        left: 5%;
         z-index: 5;
     }
 
@@ -2131,6 +2200,9 @@ img {
         rotate: 10deg;
     }
 
+    .folhas1-container4{
+        display: none;
+    }
 
 
     /* ================= ESTILO DO QUINTO CONTAINER ================= */ 

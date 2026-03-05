@@ -328,7 +328,9 @@ enfeitesContainer2.forEach((enfeite) => {
 });
 
 
-
+// ============================= > TABATA < =
+ativarGrupoMobile('.folhas12-container3', '.girassol6-container3');
+ativarGrupoMobile('.folhas11-container3', '.folhas13-container3'); // <-- Par novo adicionado!
 
 
 
@@ -340,75 +342,85 @@ enfeitesContainer2.forEach((enfeite) => {
 
 
 // ==========================================================
-// PARES DE ANIMAÇÃO (MÃO DUPLA) - CONTAINER 3 para o midia pc after
+// EFEITOS DE GRUPO (SÓ MOBILE) - CONTAINER 3
 // ==========================================================
 
-// ============================= > MARCELA < =
-const girassol1_c3 = document.querySelector('.girassol1-container3');
-const folhas2_c3 = document.querySelector('.folhas2-container3');
-if (girassol1_c3 && folhas2_c3) ativarAnimacao(girassol1_c3, folhas2_c3);
+// Função inteligente que aceita qualquer quantidade de imagens juntas
+function ativarGrupoMobile(...seletores) {
+    const elementos = seletores.map(seletor => document.querySelector(seletor)).filter(el => el !== null);
+    if (elementos.length === 0) return;
 
-const girassol3_c3 = document.querySelector('.girassol3-container3');
-const folhas1_c3 = document.querySelector('.folhas1-container3');
-if (girassol3_c3 && folhas1_c3) ativarAnimacao(girassol3_c3, folhas1_c3);
+    let tempoAnimacao;
 
+    function dispararEfeito() {
+        if (window.innerWidth <= 768) { // Mágica apenas no celular!
+            elementos.forEach(el => {
+                if (el.className.includes('girassol')) {
+                    el.classList.add('girassol-balancando');
+                } else {
+                    el.classList.add('tremendo');
+                }
+            });
 
-
-
-
-
-// ============================= > LELE < =
-const girassol2_c3 = document.querySelector('.girassol2-container3');
-const folhas7_c3 = document.querySelector('.folhas7-container3');
-if (girassol2_c3 && folhas7_c3) ativarAnimacao(girassol2_c3, folhas7_c3);
-
-
-
-
-
-// ============================= > CLARA < =
-const girassol4_c3 = document.querySelector('.girassol4-container3');
-const folhas8_c3 = document.querySelector('.folhas8-container3');
-if (girassol4_c3 && folhas8_c3) ativarAnimacao(girassol4_c3, folhas8_c3);
-
-
-
-
-
-
-// ============================= > TABATA < =
-const girassol5_c3 = document.querySelector('.girassol5-container3');
-const folhas10_c3 = document.querySelector('.folhas10-container3');
-if (girassol5_c3 && folhas10_c3) ativarAnimacao(girassol5_c3, folhas10_c3);
-
-const girassol6_c3 = document.querySelector('.girassol6-container3');
-const folhas9_c3 = document.querySelector('.folhas9-container3');
-if (girassol6_c3 && folhas9_c3) ativarAnimacao(girassol6_c3, folhas9_c3);
-
-
-// EFEITO ISOLADO: Folhas 5 e 6 (Sem par de Girassol)
-
-const folhasSolitariasC3 = document.querySelectorAll('.folhas5-container3, .folhas6-container3');
-
-folhasSolitariasC3.forEach((folha) => {
-    let tempoFolhaSolitaria;
-
-    function tremerSolitaria() {
-        folha.classList.add('tremendo'); // Usa a sua animação original!
-        
-        clearTimeout(tempoFolhaSolitaria); 
-        
-        tempoFolhaSolitaria = setTimeout(() => {
-            folha.classList.remove('tremendo');
-        }, 600);
+            clearTimeout(tempoAnimacao); 
+            
+            tempoAnimacao = setTimeout(() => {
+                elementos.forEach(el => {
+                    el.classList.remove('girassol-balancando');
+                    el.classList.remove('tremendo');
+                });
+            }, 600);
+        }
     }
 
-    // Gatilhos
-    folha.addEventListener('click', tremerSolitaria);
-    folha.addEventListener('mouseenter', () => {
-        if (window.innerWidth >= 900) tremerSolitaria();
+    elementos.forEach(el => {
+        el.style.pointerEvents = "auto";
+        el.style.cursor = "pointer";
+        el.addEventListener('click', dispararEfeito);
     });
-});
+}
+
+
+// ============================= > MARCELA < =
+ativarGrupoMobile('.folhas3-container3', '.folhas2-container3', '.girassol1-container3');
+ativarGrupoMobile('.folhas1-container3'); // Folha solitária da Marcela
+
+
+// ============================= > LELE, MARCELA & CLARA < =
+// (Juntou o girassol2 da Lele, girassol3 da Marcela e as folhas 7 e 8)
+ativarGrupoMobile('.folhas8-container3', '.folhas7-container3', '.girassol2-container3', '.girassol3-container3');
+
+
+// ============================= > TABATA & CLARA < =
+// (Juntou o girassol4 da Clara com o girassol5 da Tabata)
+ativarGrupoMobile('.folhas9-container3', '.folhas10-container3', '.girassol4-container3', '.girassol5-container3');
+ativarGrupoMobile('.folhas12-container3', '.girassol6-container3'); // O outro par da Tabata
+
+
+// ============================= > FOLHAS ISOLADAS < =
+ativarGrupoMobile('.folhas4-container3', '.folhas5-container3', '.folhas6-container3');
+
+
+// ============================= > GRUPO NOVO / EXTRA < =
+// (Estes não estavam no código antigo do PC, mas adicionei conforme sua lista!)
+ativarGrupoMobile('.girassol7-container3', '.folhas14-container3', '.folhas15-container3');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
